@@ -81,8 +81,7 @@ public class frm15 extends JFrame {
         btnCalcular.setBounds(150, 170, 100, 30);
         getContentPane().add(btnCalcular);
 
-        btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
-        
+        btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());   
     }
 
     protected void btnCalcular_actionPerformed() {
