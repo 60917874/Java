@@ -100,12 +100,10 @@ public class frm14 extends JFrame {
         double cuartoNumero = Double.parseDouble(txtCuartoNumero.getText());
         double quintoNumero = Double.parseDouble(txtQuintoNumero.getText());
 
-        // Encontrar los tres números mayores
         double mayor = Math.max(primerNumero, Math.max(segundoNumero, Math.max(tercerNumero, Math.max(cuartoNumero, quintoNumero))));
         double menor = Math.min(primerNumero, Math.min(segundoNumero, Math.min(tercerNumero, Math.min(cuartoNumero, quintoNumero))));
         double medio = primerNumero + segundoNumero + tercerNumero + cuartoNumero + quintoNumero - mayor - menor;
 
-        // Calcular el promedio
         double promedio = (mayor + medio + menor) / 3;
 
         lblPromedio.setText("Promedio de los mayores: " + promedio);
