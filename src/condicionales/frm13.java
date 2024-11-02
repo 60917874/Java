@@ -44,12 +44,11 @@ public class frm13 extends JFrame {
         getContentPane().add(lblResultado);
 
         txtResultado = new JTextField();
-        txtResultado.setBounds(150, 80, 100, 30);
-        txtResultado.setEditable(false);
+        txtResultado.setBounds(150, 80, 80, 30);
         getContentPane().add(txtResultado);
 
-        JButton btnCalcular = new JButton("Verificar");
-        btnCalcular.setBounds(30, 130, 200, 30);
+        JButton btnCalcular = new JButton("Calcular");
+        btnCalcular.setBounds(130, 130, 110, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
@@ -69,7 +68,7 @@ public class frm13 extends JFrame {
         int tercerDigito = numero % 10;
 
         if ((segundoDigito == primerDigito + 1 && tercerDigito == segundoDigito + 1) ||
-            (segundoDigito == primerDigito - 1 && tercerDigito == segundoDigito - 1)) {
+                (segundoDigito == primerDigito - 1 && tercerDigito == segundoDigito - 1)) {
             resultado = "Cifra consecutiva";
         } else {
             resultado = "Cifra no consecutiva";
