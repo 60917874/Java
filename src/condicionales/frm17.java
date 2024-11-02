@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 public class frm17 extends JFrame {
     private static final long serialVersionUID = 1L;
     JTextField txtDocenas, txtCompra, txtDescuento, txtTotal, txtLapiceros;
+    JLabel lblDocenas, lblCompra, lblDescuento, lblTotal;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -35,7 +36,7 @@ public class frm17 extends JFrame {
         getContentPane().add(lblDocenas);
 
         txtDocenas = new JTextField();
-        txtDocenas.setBounds(180, 30, 100, 30);
+        txtDocenas.setBounds(180, 30, 80, 30);
         txtDocenas.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtDocenas);
 
@@ -44,8 +45,7 @@ public class frm17 extends JFrame {
         getContentPane().add(lblCompra);
 
         txtCompra = new JTextField();
-        txtCompra.setBounds(180, 80, 100, 30);
-        txtCompra.setEditable(false);
+        txtCompra.setBounds(180, 80, 80, 30);
         txtCompra.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCompra);
 
@@ -54,8 +54,7 @@ public class frm17 extends JFrame {
         getContentPane().add(lblDescuento);
 
         txtDescuento = new JTextField();
-        txtDescuento.setBounds(180, 130, 100, 30);
-        txtDescuento.setEditable(false);
+        txtDescuento.setBounds(180, 130, 80, 30);
         txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtDescuento);
 
@@ -64,23 +63,21 @@ public class frm17 extends JFrame {
         getContentPane().add(lblTotal);
 
         txtTotal = new JTextField();
-        txtTotal.setBounds(180, 180, 100, 30);
-        txtTotal.setEditable(false);
+        txtTotal.setBounds(180, 180, 80, 30);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtTotal);
 
-        JLabel lblLapiceros = new JLabel("Lapiceros de Obsequio:");
+        JLabel lblLapiceros = new JLabel("Obsequio:");
         lblLapiceros.setBounds(30, 230, 150, 30);
         getContentPane().add(lblLapiceros);
 
         txtLapiceros = new JTextField();
-        txtLapiceros.setBounds(180, 230, 100, 30);
-        txtLapiceros.setEditable(false);
+        txtLapiceros.setBounds(180, 230, 80, 30);
         txtLapiceros.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtLapiceros);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 270, 250, 30);
+        btnCalcular.setBounds(180, 280, 90, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
