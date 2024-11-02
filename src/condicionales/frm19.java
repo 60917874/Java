@@ -35,7 +35,7 @@ public class frm19 extends JFrame {
         getContentPane().add(lblSexo);
 
         txtSexo = new JTextField();
-        txtSexo.setBounds(180, 30, 100, 30);
+        txtSexo.setBounds(180, 30, 80, 30);
         txtSexo.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtSexo);
 
@@ -44,7 +44,7 @@ public class frm19 extends JFrame {
         getContentPane().add(lblEdad);
 
         txtEdad = new JTextField();
-        txtEdad.setBounds(180, 80, 100, 30);
+        txtEdad.setBounds(180, 80, 80, 30);
         txtEdad.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtEdad);
 
@@ -53,13 +53,12 @@ public class frm19 extends JFrame {
         getContentPane().add(lblCategoria);
 
         txtCategoria = new JTextField();
-        txtCategoria.setBounds(180, 130, 100, 30);
-        txtCategoria.setEditable(false);
+        txtCategoria.setBounds(180, 130, 80, 30);
         txtCategoria.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCategoria);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 180, 250, 30);
+        btnCalcular.setBounds(180, 180, 90, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
