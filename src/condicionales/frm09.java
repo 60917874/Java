@@ -55,7 +55,6 @@ public class frm09 extends JFrame {
         txtTotal = new JTextField();
         txtTotal.setBounds(150, 130, 80, 30);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtTotal.setEditable(false);
         getContentPane().add(txtTotal);
 
         JButton btnCalcular = new JButton("Calcular");
