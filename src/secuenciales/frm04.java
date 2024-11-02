@@ -11,7 +11,7 @@ import javax.swing.SwingConstants;
 
 public class frm04 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtPies, txtPulgadas;
+    JTextField txtPies, txtPulgadas, txtMetros;
     JLabel lblMetros;
 
     public static void main(String[] args) {
@@ -39,8 +39,8 @@ public class frm04 extends JFrame {
         lblPulgadas.setBounds(30, 70, 80, 30);
         getContentPane().add(lblPulgadas);
 
-        lblMetros = new JLabel("Metros: ");
-        lblMetros.setBounds(30, 160, 200, 30);
+        JLabel lblMetros = new JLabel("Metros: ");
+        lblMetros.setBounds(30, 120, 80, 30);
         getContentPane().add(lblMetros);
 
         txtPies = new JTextField();
@@ -55,8 +55,14 @@ public class frm04 extends JFrame {
         txtPulgadas.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtPulgadas);
 
+        txtMetros = new JTextField();
+        txtMetros.setBounds(130, 120, 100, 30);
+        txtMetros.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtMetros.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtMetros);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 120, 100, 30);
+        btnCalcular.setBounds(90, 170, 100, 30);
         btnCalcular.setMnemonic('C');
         getContentPane().add(btnCalcular);
 
@@ -67,7 +73,7 @@ public class frm04 extends JFrame {
         int pies = Integer.parseInt(txtPies.getText());
         int pulgadas = Integer.parseInt(txtPulgadas.getText());
 
-        double totalMetros = (pies * 0.3048) + (pulgadas * 0.0254); // Convertir pies y pulgadas a metros
+        double totalMetros = (pies * 0.3048) + (pulgadas * 0.0254);
 
         DecimalFormat df = new DecimalFormat("###,###.##");
         lblMetros.setText("Metros: " + df.format(totalMetros));
