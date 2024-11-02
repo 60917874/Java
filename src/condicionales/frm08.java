@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 public class frm08 extends JFrame {
     private static final long serialVersionUID = 1L;
     JTextField txtExamenes, txtTotal;
+    JLabel lblExamenes, lblTotal;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -34,7 +35,7 @@ public class frm08 extends JFrame {
         lblExamenes.setBounds(50, 50, 150, 30);
         getContentPane().add(lblExamenes);
 
-        JLabel lblTotal = new JLabel("Total de propina:");
+        JLabel lblTotal = new JLabel("Total:");
         lblTotal.setBounds(50, 90, 100, 30);
         getContentPane().add(lblTotal);
 
@@ -46,7 +47,6 @@ public class frm08 extends JFrame {
         txtTotal = new JTextField();
         txtTotal.setBounds(180, 90, 80, 30);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtTotal.setEditable(false);
         getContentPane().add(txtTotal);
 
         JButton btnCalcular = new JButton("Calcular");
