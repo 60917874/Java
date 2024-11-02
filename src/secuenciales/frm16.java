@@ -10,8 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm16 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtHoras, txtTarifa;
-    JLabel lblSBasico, lblSBruto, lblSNeto;
+    JTextField txtHoras, txtTarifa, txtSBasico, txtSBruto, txtSNeto;
+    JLabel lblHoras, lblTarifa, lblSBasico, lblSBruto, lblSNeto;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -38,16 +38,16 @@ public class frm16 extends JFrame {
         lblTarifa.setBounds(50, 90, 150, 30);
         getContentPane().add(lblTarifa);
 
-        lblSBasico = new JLabel("Sueldo básico:");
-        lblSBasico.setBounds(50, 210, 200, 30);
+        JLabel lblSBasico = new JLabel("Sueldo básico:");
+        lblSBasico.setBounds(50, 130, 200, 30);
         getContentPane().add(lblSBasico);
 
-        lblSBruto = new JLabel("Sueldo bruto:");
-        lblSBruto.setBounds(50, 240, 200, 30);
+        JLabel lblSBruto = new JLabel("Sueldo bruto:");
+        lblSBruto.setBounds(50, 170, 200, 30);
         getContentPane().add(lblSBruto);
 
-        lblSNeto = new JLabel("Sueldo neto:");
-        lblSNeto.setBounds(50, 270, 200, 30);
+        JLabel lblSNeto = new JLabel("Sueldo neto:");
+        lblSNeto.setBounds(50, 210, 200, 30);
         getContentPane().add(lblSNeto);
 
         txtHoras = new JTextField();
@@ -62,12 +62,30 @@ public class frm16 extends JFrame {
         txtTarifa.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtTarifa);
 
+        txtSBasico = new JTextField();
+        txtSBasico.setBounds(220, 130, 60, 30);
+        txtSBasico.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtSBasico.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtSBasico);
+
+        txtSBruto = new JTextField();
+        txtSBruto.setBounds(220, 170, 60, 30);
+        txtSBruto.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtSBruto.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtSBruto);
+
+        txtSNeto = new JTextField();
+        txtSNeto.setBounds(220, 210, 60, 30);
+        txtSNeto.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtSNeto.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtSNeto);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(150, 130, 100, 30);
+        btnCalcular.setBounds(150, 250, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
-        
+
     }
 
     protected void btnCalcular_actionPerformed() {
