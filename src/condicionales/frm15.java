@@ -45,7 +45,6 @@ public class frm15 extends JFrame {
 
         txtComision = new JTextField();
         txtComision.setBounds(180, 80, 100, 30);
-        txtComision.setEditable(false);
         txtComision.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtComision);
 
@@ -55,7 +54,6 @@ public class frm15 extends JFrame {
 
         txtSBruto = new JTextField();
         txtSBruto.setBounds(180, 130, 100, 30);
-        txtSBruto.setEditable(false);
         txtSBruto.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtSBruto);
 
@@ -65,7 +63,6 @@ public class frm15 extends JFrame {
 
         txtDescuento = new JTextField();
         txtDescuento.setBounds(180, 180, 100, 30);
-        txtDescuento.setEditable(false);
         txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtDescuento);
 
@@ -75,12 +72,11 @@ public class frm15 extends JFrame {
 
         txtSNeto = new JTextField();
         txtSNeto.setBounds(180, 230, 100, 30);
-        txtSNeto.setEditable(false);
         txtSNeto.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtSNeto);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 270, 250, 30);
+        btnCalcular.setBounds(180, 270, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
