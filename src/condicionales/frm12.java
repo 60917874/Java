@@ -30,26 +30,25 @@ public class frm12 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        JLabel lblNumero = new JLabel("Número (1-7):");
+        JLabel lblNumero = new JLabel("Número:");
         lblNumero.setBounds(30, 30, 120, 30);
         getContentPane().add(lblNumero);
-
-        txtNumero = new JTextField();
-        txtNumero.setBounds(150, 30, 60, 30);
-        txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
-        getContentPane().add(txtNumero);
 
         JLabel lblDia = new JLabel("Día:");
         lblDia.setBounds(30, 80, 120, 30);
         getContentPane().add(lblDia);
 
+        txtNumero = new JTextField();
+        txtNumero.setBounds(110, 30, 60, 30);
+        txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
+        getContentPane().add(txtNumero);
+
         txtDia = new JTextField();
-        txtDia.setBounds(150, 80, 100, 30);
-        txtDia.setEditable(false);
+        txtDia.setBounds(110, 80, 60, 30);
         getContentPane().add(txtDia);
 
-        JButton btnCalcular = new JButton("Determinar Día");
-        btnCalcular.setBounds(30, 130, 200, 30);
+        JButton btnCalcular = new JButton("Calcular");
+        btnCalcular.setBounds(90, 130, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
