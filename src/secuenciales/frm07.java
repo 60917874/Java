@@ -2,6 +2,9 @@ package secuenciales;
 
 import java.awt.EventQueue;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -10,8 +13,7 @@ import javax.swing.SwingConstants;
 
 public class frm07 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtBase, txtAltura;
-    JLabel lblArea, lblPerimetro;
+    JTextField txtBase, txtAltura, txtArea, txtPerimetro;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -28,24 +30,24 @@ public class frm07 extends JFrame {
 
     public frm07() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(0, 0, 300, 250);
+        setBounds(0, 0, 300, 350);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        JLabel lblBase = new JLabel("Base:");
+        JLabel lblBase = new JLabel("Base :");
         lblBase.setBounds(50, 50, 80, 30);
         getContentPane().add(lblBase);
 
-        JLabel lblAltura = new JLabel("Altura:");
+        JLabel lblAltura = new JLabel("Altura :");
         lblAltura.setBounds(50, 90, 80, 30);
         getContentPane().add(lblAltura);
 
-        lblArea = new JLabel("Área:");
-        lblArea.setBounds(50, 130, 200, 30);
+        JLabel lblArea = new JLabel("Área :");
+        lblArea.setBounds(50, 130, 80, 30); // Ajustado para estar más cerca de "Altura"
         getContentPane().add(lblArea);
 
-        lblPerimetro = new JLabel("Perímetro:");
-        lblPerimetro.setBounds(50, 170, 200, 30);
+        JLabel lblPerimetro = new JLabel("Perímetro :");
+        lblPerimetro.setBounds(50, 170, 80, 30);
         getContentPane().add(lblPerimetro);
 
         txtBase = new JTextField();
@@ -60,11 +62,30 @@ public class frm07 extends JFrame {
         txtAltura.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtAltura);
 
+        txtArea = new JTextField();
+        txtArea.setBounds(130, 130, 60, 30);
+        txtArea.setFocusable(false);
+        txtArea.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtArea.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtArea);
+
+        txtPerimetro = new JTextField();
+        txtPerimetro.setBounds(130, 170, 60, 30);
+        txtPerimetro.setFocusable(false);
+        txtPerimetro.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtPerimetro.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtPerimetro);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(80, 210, 100, 30);
+        btnCalcular.setBounds(100, 250, 100, 30);
+        btnCalcular.setMnemonic('a');
         getContentPane().add(btnCalcular);
 
-        btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
+        btnCalcular.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                btnCalcular_actionPerformed();
+            }
+        });
     }
 
     protected void btnCalcular_actionPerformed() {
@@ -74,7 +95,8 @@ public class frm07 extends JFrame {
         int area = base * altura;
         int perimetro = 2 * (base + altura);
 
-        lblArea.setText("Área: " + area);
-        lblPerimetro.setText("Perímetro: " + perimetro);
+        DecimalFormat df = new DecimalFormat("###.00");
+        txtArea.setText(df.format(area));
+        txtPerimetro.setText(df.format(perimetro));
     }
 }
