@@ -35,47 +35,47 @@ public class frm01 extends JFrame {
 		setLocationRelativeTo(null);
 
 		JLabel lblUnidades = new JLabel("Unidades :");
-		lblUnidades.setBounds(50, 50, 80, 30);
+		lblUnidades.setBounds(50, 20, 80, 30);
 		getContentPane().add(lblUnidades);
 
 		JLabel lblCompra = new JLabel("Compra :");
-		lblCompra.setBounds(50, 90, 80, 30);
+		lblCompra.setBounds(50, 60, 80, 30);
 		getContentPane().add(lblCompra);
 
 		JLabel lblDescuento = new JLabel("Descuento: ");
-		lblDescuento.setBounds(50, 130, 80, 30);
+		lblDescuento.setBounds(50, 100, 80, 30);
 		getContentPane().add(lblDescuento);
 
 		JLabel lblTotal = new JLabel("Total: ");
-		lblTotal.setBounds(50, 180, 80, 30);
+		lblTotal.setBounds(50, 140, 80, 30);
 		getContentPane().add(lblTotal);
 
 		txtUnidades = new JTextField();
-		txtUnidades.setBounds( 130, 50, 60, 30);
-		txtUnidades.setHorizontalAlignment( SwingConstants.RIGHT );
-		txtUnidades.setMargin( new Insets(5, 5, 5, 5) );
+		txtUnidades.setBounds(130, 20, 60, 30);
+		txtUnidades.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtUnidades.setMargin(new Insets(5, 5, 5, 5));
 		getContentPane().add(txtUnidades);
 
 		txtCompra = new JTextField();
-		txtCompra.setBounds( 130, 90, 60, 30);
-		txtCompra.setHorizontalAlignment( SwingConstants.RIGHT );
-		txtCompra.setMargin( new Insets(5, 5, 5, 5) );
+		txtCompra.setBounds(130, 60, 60, 30);
+		txtCompra.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtCompra.setMargin(new Insets(5, 5, 5, 5));
 		getContentPane().add(txtCompra);
 
 		txtDescuento = new JTextField();
-		txtDescuento.setBounds( 130, 130, 60, 30);
-		txtDescuento.setHorizontalAlignment( SwingConstants.RIGHT );
-		txtDescuento.setMargin( new Insets(5, 5, 5, 5) );
+		txtDescuento.setBounds(130, 100, 60, 30);
+		txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtDescuento.setMargin(new Insets(5, 5, 5, 5));
 		getContentPane().add(txtDescuento);
 
 		txtTotal = new JTextField();
-		txtTotal.setBounds( 130, 180, 60, 30);
-		txtTotal.setHorizontalAlignment( SwingConstants.RIGHT );
-		txtTotal.setMargin( new Insets(5, 5, 5, 5) );
+		txtTotal.setBounds(130, 140, 60, 30);
+		txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtTotal.setMargin(new Insets(5, 5, 5, 5));
 		getContentPane().add(txtTotal);
 
 		JButton btnCalcular = new JButton("Calcular");
-		btnCalcular.setBounds( 80, 150, 100, 30);
+		btnCalcular.setBounds(110, 180, 100, 30);
 		btnCalcular.setMnemonic('a');
 		getContentPane().add(btnCalcular);
 
@@ -90,20 +90,22 @@ public class frm01 extends JFrame {
 	}
 
 	protected void btnCalcular_actionPerformed() {
-		int unidades = Integer.parseInt( txtUnidades.getText() );
+		int unidades = Integer.parseInt(txtUnidades.getText());
 
 		int precio = 27;
-		if (unidades >= 26 && unidades <= 50) precio = 25;
-		else if (unidades > 50 ) precio = 23;
+		if (unidades >= 26 && unidades <= 50)
+			precio = 25;
+		else if (unidades > 50)
+			precio = 23;
 
 		double compra = precio * unidades;
-		double descuento = ( unidades > 50 ? 0.15 : 0.05 ) * compra;
+		double descuento = (unidades > 50 ? 0.15 : 0.05) * compra;
 
 		double total = compra - descuento;
 
-		txtCompra.setText( String.format("S/ %.2f", compra ) );
-		txtDescuento.setText( String.format("S/ %.2f", descuento ) );
-		txtTotal.setText( String.format("S/ %.2f", total ) );
+		txtCompra.setText(String.format("S/ %.2f", compra));
+		txtDescuento.setText(String.format("S/ %.2f", descuento));
+		txtTotal.setText(String.format("S/ %.2f", total));
 
 	}
 
