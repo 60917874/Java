@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 public class frm03 extends JFrame {
     private static final long serialVersionUID = 1L;
 
-    JTextField txtKilometros, txtPies, txtMillas;
+    JTextField txtKilometros, txtPies, txtMillas, txtMetros, txtYardas;
     JLabel lblMetros, lblYardas;
 
     public static void main(String[] args) {
@@ -46,12 +46,12 @@ public class frm03 extends JFrame {
         lblMillas.setBounds(50, 110, 100, 30);
         getContentPane().add(lblMillas);
 
-        lblMetros = new JLabel("0.0 m");
-        lblMetros.setBounds(180, 150, 120, 30);
+        JLabel lblMetros = new JLabel("0.0 m");
+        lblMetros.setBounds(50, 150, 120, 30);
         getContentPane().add(lblMetros);
-        
-        lblYardas = new JLabel("0.0 yd");
-        lblYardas.setBounds(180, 190, 120, 30);
+
+        JLabel lblYardas = new JLabel("0.0 yd");
+        lblYardas.setBounds(50, 190, 120, 30);
         getContentPane().add(lblYardas);
 
         txtKilometros = new JTextField();
@@ -72,6 +72,18 @@ public class frm03 extends JFrame {
         txtMillas.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtMillas);
 
+        txtMetros = new JTextField();
+        txtMetros.setBounds(160, 150, 100, 30);
+        txtMetros.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtMetros.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtMetros);
+
+        txtYardas = new JTextField();
+        txtYardas.setBounds(160, 190, 100, 30);
+        txtYardas.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtYardas.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtYardas);
+
         JButton btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(100, 230, 120, 30);
         getContentPane().add(btnCalcular);
@@ -80,16 +92,16 @@ public class frm03 extends JFrame {
     }
 
     protected void btnCalcular_actionPerformed() {
-        
-            double kilometros = Double.parseDouble(txtKilometros.getText());
-            double pies = Double.parseDouble(txtPies.getText());
-            double millas = Double.parseDouble(txtMillas.getText());
 
-            double metros = kilometros * 1000 + pies / 3.2808 + millas * 1609;
-            double yardas = metros * 1.09361;
+        double kilometros = Double.parseDouble(txtKilometros.getText());
+        double pies = Double.parseDouble(txtPies.getText());
+        double millas = Double.parseDouble(txtMillas.getText());
 
-            DecimalFormat df = new DecimalFormat("###.##");
-            lblMetros.setText(df.format(metros) + " m");
-            lblYardas.setText(df.format(yardas) + " yd");
+        double metros = kilometros * 1000 + pies / 3.2808 + millas * 1609;
+        double yardas = metros * 1.09361;
+
+        DecimalFormat df = new DecimalFormat("###.##");
+        lblMetros.setText(df.format(metros) + " m");
+        lblYardas.setText(df.format(yardas) + " yd");
     }
 }
