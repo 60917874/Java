@@ -1,7 +1,6 @@
 package condicionales;
 
 import java.awt.EventQueue;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
