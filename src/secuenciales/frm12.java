@@ -10,8 +10,8 @@ import java.awt.Insets;
 
 public class frm12 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtA, txtB, txtC;
-    JLabel lblPrimeraRaiz, lblSegundaRaiz;
+    JTextField txtA, txtB, txtC, txtPrimeraRaiz, txtSegundaRaiz;
+    JLabel lblA, lblB, lblC, lblPrimeraRaiz, lblSegundaRaiz;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -44,12 +44,12 @@ public class frm12 extends JFrame {
         lblC.setBounds(50, 130, 80, 30);
         getContentPane().add(lblC);
 
-        lblPrimeraRaiz = new JLabel("Primera raíz:");
-        lblPrimeraRaiz.setBounds(50, 170, 200, 30);
+        JLabel lblPrimeraRaiz = new JLabel("Primera raíz:");
+        lblPrimeraRaiz.setBounds(50, 170, 80, 30);
         getContentPane().add(lblPrimeraRaiz);
 
-        lblSegundaRaiz = new JLabel("Segunda raíz:");
-        lblSegundaRaiz.setBounds(50, 210, 200, 30);
+        JLabel lblSegundaRaiz = new JLabel("Segunda raíz:");
+        lblSegundaRaiz.setBounds(50, 210, 80, 30);
         getContentPane().add(lblSegundaRaiz);
 
         txtA = new JTextField();
@@ -69,6 +69,18 @@ public class frm12 extends JFrame {
         txtC.setHorizontalAlignment(SwingConstants.RIGHT);
         txtC.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtC);
+
+        txtPrimeraRaiz = new JTextField();
+        txtPrimeraRaiz.setBounds(130, 170, 60, 30);
+        txtPrimeraRaiz.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtPrimeraRaiz.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtPrimeraRaiz);
+
+        txtSegundaRaiz = new JTextField();
+        txtSegundaRaiz.setBounds(130, 210, 60, 30);
+        txtSegundaRaiz.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtSegundaRaiz.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtSegundaRaiz);
 
         JButton btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(100, 250, 100, 30);
