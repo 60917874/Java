@@ -10,8 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm11 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtPrimerNumero, txtSegundoNumero;
-    JLabel lblPrimerResultado, lblSegundoResultado;
+    JTextField txtPrimerNumero, txtSegundoNumero, txtPrimerResultado, txtSegundoResultado;
+    JLabel lblPrimerNumero, lblSegundoNumero, lblPrimerResultado, lblSegundoResultado;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -32,36 +32,48 @@ public class frm11 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        JLabel lblNumero1 = new JLabel("Número 1 (3 cifras):");
-        lblNumero1.setBounds(50, 50, 120, 30);
+        JLabel lblNumero1 = new JLabel("Número 1:");
+        lblNumero1.setBounds(50, 30, 120, 30);
         getContentPane().add(lblNumero1);
 
-        JLabel lblNumero2 = new JLabel("Número 2 (3 cifras):");
-        lblNumero2.setBounds(50, 90, 120, 30);
+        JLabel lblNumero2 = new JLabel("Número 2:");
+        lblNumero2.setBounds(50, 70, 120, 30);
         getContentPane().add(lblNumero2);
 
-        lblPrimerResultado = new JLabel("Resultado 1:");
-        lblPrimerResultado.setBounds(50, 130, 200, 30);
+        JLabel lblPrimerResultado = new JLabel("Resultado 1:");
+        lblPrimerResultado.setBounds(50, 110, 120, 30);
         getContentPane().add(lblPrimerResultado);
 
-        lblSegundoResultado = new JLabel("Resultado 2:");
-        lblSegundoResultado.setBounds(50, 170, 200, 30);
+        JLabel lblSegundoResultado = new JLabel("Resultado 2:");
+        lblSegundoResultado.setBounds(50, 150, 120, 30);
         getContentPane().add(lblSegundoResultado);
 
         txtPrimerNumero = new JTextField();
-        txtPrimerNumero.setBounds(180, 50, 60, 30);
+        txtPrimerNumero.setBounds(180, 30, 60, 30);
         txtPrimerNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPrimerNumero.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtPrimerNumero);
 
         txtSegundoNumero = new JTextField();
-        txtSegundoNumero.setBounds(180, 90, 60, 30);
+        txtSegundoNumero.setBounds(180, 70, 60, 30);
         txtSegundoNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         txtSegundoNumero.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtSegundoNumero);
 
+        txtPrimerResultado = new JTextField();
+        txtPrimerResultado.setBounds(180, 110, 60, 30);
+        txtPrimerResultado.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtPrimerResultado.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtPrimerResultado);
+
+        txtSegundoResultado = new JTextField();
+        txtSegundoResultado.setBounds(180, 150, 60, 30);
+        txtSegundoResultado.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtSegundoResultado.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtSegundoResultado);
+
         JButton btnCalcular = new JButton("Intercambiar");
-        btnCalcular.setBounds(80, 210, 120, 30);
+        btnCalcular.setBounds(80, 190, 120, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
@@ -79,7 +91,6 @@ public class frm11 extends JFrame {
         int segundo_cifra2 = (numero2 / 10) % 10;
         int segundo_cifra3 = numero2 % 10;
 
-        // Crear los números intercambiados
         int nuevoNumero1 = segundo_cifra1 * 100 + segundo_cifra2 * 10 + segundo_cifra3;
         int nuevoNumero2 = primer_cifra1 * 100 + primer_cifra2 * 10 + primer_cifra3;
 
