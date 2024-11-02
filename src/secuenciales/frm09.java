@@ -10,8 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm09 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtNumero;
-    JLabel lblSuma;
+    JTextField txtNumero, txtSuma;
+    JLabel lblNumero, lblSuma;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -32,22 +32,28 @@ public class frm09 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        JLabel lblNumero = new JLabel("Número (4 cifras):");
+        JLabel lblNumero = new JLabel("Número:");
         lblNumero.setBounds(50, 50, 120, 30);
         getContentPane().add(lblNumero);
 
-        lblSuma = new JLabel("Suma:");
-        lblSuma.setBounds(50, 130, 200, 30);
+        JLabel lblSuma = new JLabel("Suma:");
+        lblSuma.setBounds(50, 100, 200, 30);
         getContentPane().add(lblSuma);
 
         txtNumero = new JTextField();
-        txtNumero.setBounds(180, 50, 60, 30);
+        txtNumero.setBounds(130, 50, 60, 30);
         txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         txtNumero.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumero);
 
+        txtSuma = new JTextField();
+        txtSuma.setBounds(130, 100, 60, 30);
+        txtSuma.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtSuma.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtSuma);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(80, 210, 100, 30);
+        btnCalcular.setBounds(80, 150, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
@@ -55,11 +61,11 @@ public class frm09 extends JFrame {
 
     protected void btnCalcular_actionPerformed() {
         int numero = Integer.parseInt(txtNumero.getText());
-        
+
         int cifra1 = numero / 1000;
         int cifra2 = (numero / 100) % 10;
         int cifra3 = (numero / 10) % 10;
-        int cifra4 = numero % 10;     
+        int cifra4 = numero % 10;
 
         int suma = cifra1 + cifra2 + cifra3 + cifra4;
 
