@@ -57,14 +57,14 @@ public class frm07 extends JFrame {
 
     protected void btnCalcular_actionPerformed() {
         int numero = Integer.parseInt(txtNumero.getText());
-        int resultadoFactorial = calcularFactorial(numero);
-        txtResultado.setText("Factorial: " + resultadoFactorial);
+        int resultado = factorial(numero);
+        txtResultado.setText("Factorial: " + resultado);
     }
 
-    private int calcularFactorial(int numero) {
+    private int factorial(int numero) {
         if (numero <= 1) {
             return 1;
         }
-        return numero * calcularFactorial(numero - 1);
+        return numero * factorial(numero - 1);
     }
 }
