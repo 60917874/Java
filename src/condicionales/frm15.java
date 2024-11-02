@@ -35,7 +35,7 @@ public class frm15 extends JFrame {
         getContentPane().add(lblVendido);
 
         txtVendido = new JTextField();
-        txtVendido.setBounds(180, 30, 100, 30);  // Establecer límites
+        txtVendido.setBounds(180, 30, 100, 30);
         txtVendido.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtVendido);
 
