@@ -43,7 +43,7 @@ public class frm07 extends JFrame {
         getContentPane().add(lblAltura);
 
         JLabel lblArea = new JLabel("Área :");
-        lblArea.setBounds(50, 130, 80, 30); // Ajustado para estar más cerca de "Altura"
+        lblArea.setBounds(50, 130, 80, 30);
         getContentPane().add(lblArea);
 
         JLabel lblPerimetro = new JLabel("Perímetro :");
