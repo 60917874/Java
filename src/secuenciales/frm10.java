@@ -10,8 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm10 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtNumero;
-    JLabel lblNReverso;
+    JTextField txtNumero, txtNReverso;
+    JLabel lblNumero, lblNReverso;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -32,22 +32,28 @@ public class frm10 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        JLabel lblNumero = new JLabel("Número (4 cifras):");
+        JLabel lblNumero = new JLabel("Número:");
         lblNumero.setBounds(50, 50, 120, 30);
         getContentPane().add(lblNumero);
 
-        lblNReverso = new JLabel("Número al revés:");
-        lblNReverso.setBounds(50, 130, 200, 30);
+        JLabel lblNReverso = new JLabel("Número al revés:");
+        lblNReverso.setBounds(50, 90, 200, 30);
         getContentPane().add(lblNReverso);
 
         txtNumero = new JTextField();
-        txtNumero.setBounds(180, 50, 60, 30);
+        txtNumero.setBounds(130, 50, 60, 30);
         txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         txtNumero.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumero);
 
+        txtNReverso = new JTextField();
+        txtNReverso.setBounds(150, 90, 60, 30);
+        txtNReverso.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtNReverso.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtNReverso);
+
         JButton btnCalcular = new JButton("Invertir");
-        btnCalcular.setBounds(80, 210, 100, 30);
+        btnCalcular.setBounds(80, 150, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
@@ -60,7 +66,6 @@ public class frm10 extends JFrame {
         int segundaCifra = (numero / 10) % 10;
         int terceraCifra = (numero / 100) % 10;
         int cuartaCifra = (numero / 1000) % 10;
-
 
         int numeroReverso = cuartaCifra * 1000 + terceraCifra * 100 + segundaCifra * 10 + primeraCifra;
 
