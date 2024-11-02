@@ -10,8 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm18 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtCantidad, txtPrecioUnitario;
-    JLabel lblImporte, lblDescuento, lblPagar;
+    JTextField txtCantidad, txtPrecioUnitario, txtImporte, txtDescuento, txtPagar;
+    JLabel lblCantidad, lblPrecioUnitario, lblImporte, lblDescuento, lblPagar;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -31,39 +31,57 @@ public class frm18 extends JFrame {
         setLocationRelativeTo(null);
 
         JLabel lblCantidad = new JLabel("Cantidad:");
-        lblCantidad.setBounds(50, 50, 100, 30);
+        lblCantidad.setBounds(50, 20, 100, 30);
         getContentPane().add(lblCantidad);
 
         JLabel lblPrecioUnitario = new JLabel("Precio Unitario:");
-        lblPrecioUnitario.setBounds(50, 90, 100, 30);
+        lblPrecioUnitario.setBounds(50, 60, 100, 30);
         getContentPane().add(lblPrecioUnitario);
 
-        lblImporte = new JLabel("Importe de la compra:");
-        lblImporte.setBounds(50, 130, 200, 30);
+        JLabel lblImporte = new JLabel("Importe de compra:");
+        lblImporte.setBounds(50, 100, 200, 30);
         getContentPane().add(lblImporte);
 
-        lblDescuento = new JLabel("Descuento:");
-        lblDescuento.setBounds(50, 160, 200, 30);
+        JLabel lblDescuento = new JLabel("Descuento:");
+        lblDescuento.setBounds(50, 140, 200, 30);
         getContentPane().add(lblDescuento);
 
-        lblPagar = new JLabel("Importe a Pagar:");
-        lblPagar.setBounds(50, 190, 200, 30);
+        JLabel lblPagar = new JLabel("Importe a Pagar:");
+        lblPagar.setBounds(50, 180, 200, 30);
         getContentPane().add(lblPagar);
 
         txtCantidad = new JTextField();
-        txtCantidad.setBounds(160, 50, 60, 30);
+        txtCantidad.setBounds(160, 20, 60, 30);
         txtCantidad.setHorizontalAlignment(SwingConstants.RIGHT);
         txtCantidad.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtCantidad);
 
         txtPrecioUnitario = new JTextField();
-        txtPrecioUnitario.setBounds(160, 90, 60, 30);
+        txtPrecioUnitario.setBounds(160, 60, 60, 30);
         txtPrecioUnitario.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPrecioUnitario.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtPrecioUnitario);
 
+        txtImporte = new JTextField();
+        txtImporte.setBounds(160, 100, 60, 30);
+        txtImporte.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtImporte.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtImporte);
+
+        txtDescuento = new JTextField();
+        txtDescuento.setBounds(160, 140, 60, 30);
+        txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtDescuento.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtDescuento);
+
+        txtPagar = new JTextField();
+        txtPagar.setBounds(160, 180, 60, 30);
+        txtPagar.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtPagar.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtPagar);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(230, 130, 100, 30);
+        btnCalcular.setBounds(160, 220, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
