@@ -1,7 +1,6 @@
 package condicionales;
 
 import java.awt.EventQueue;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -83,43 +82,42 @@ public class frm05 extends JFrame {
     }
 
     protected void btnCalcular_actionPerformed() {
-    int numero = Integer.parseInt(txtNumero.getText());
+        int numero = Integer.parseInt(txtNumero.getText());
 
-    int primerDigito = numero / 1000;
-    int segundoDigito = (numero / 100) % 10;
-    int tercerDigito = (numero / 10) % 10;
-    int cuartoDigito = numero % 10;
+        int primerDigito = numero / 1000;
+        int segundoDigito = (numero / 100) % 10;
+        int tercerDigito = (numero / 10) % 10;
+        int cuartoDigito = numero % 10;
 
-    int mayor = primerDigito;
-    int menor = primerDigito;
+        int mayor = primerDigito;
+        int menor = primerDigito;
 
-    if (segundoDigito > mayor) {
-        mayor = segundoDigito;
+        if (segundoDigito > mayor) {
+            mayor = segundoDigito;
+        }
+        if (tercerDigito > mayor) {
+            mayor = tercerDigito;
+        }
+        if (cuartoDigito > mayor) {
+            mayor = cuartoDigito;
+        }
+
+        if (segundoDigito < menor) {
+            menor = segundoDigito;
+        }
+        if (tercerDigito < menor) {
+            menor = tercerDigito;
+        }
+        if (cuartoDigito < menor) {
+            menor = cuartoDigito;
+        }
+
+        txtMayor.setText(String.valueOf(mayor));
+        txtMenor.setText(String.valueOf(menor));
+
+        String resultadoMayorMenor = "" + mayor + menor;
+        txtResultado.setText(resultadoMayorMenor);
+
     }
-    if (tercerDigito > mayor) {
-        mayor = tercerDigito;
-    }
-    if (cuartoDigito > mayor) {
-        mayor = cuartoDigito;
-    }
-
-    if (segundoDigito < menor) {
-        menor = segundoDigito;
-    }
-    if (tercerDigito < menor) {
-        menor = tercerDigito;
-    }
-    if (cuartoDigito < menor) {
-        menor = cuartoDigito;
-    }
-
-    txtMayor.setText(String.valueOf(mayor));
-    txtMenor.setText(String.valueOf(menor));
-
-    String resultadoMayorMenor = "" + mayor + menor;
-    txtResultado.setText(resultadoMayorMenor);
-
-    }
-
 
 }
