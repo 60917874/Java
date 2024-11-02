@@ -35,7 +35,7 @@ public class frm16 extends JFrame {
         getContentPane().add(lblIngreso);
 
         txtIngreso = new JTextField();
-        txtIngreso.setBounds(180, 30, 100, 30);
+        txtIngreso.setBounds(180, 30, 80, 30);
         txtIngreso.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtIngreso);
 
@@ -44,7 +44,7 @@ public class frm16 extends JFrame {
         getContentPane().add(lblCosto);
 
         txtCosto = new JTextField();
-        txtCosto.setBounds(180, 80, 100, 30);
+        txtCosto.setBounds(180, 80, 80, 30);
         txtCosto.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCosto);
 
@@ -53,8 +53,7 @@ public class frm16 extends JFrame {
         getContentPane().add(lblInicial);
 
         txtInicial = new JTextField();
-        txtInicial.setBounds(180, 130, 100, 30);
-        txtInicial.setEditable(false);
+        txtInicial.setBounds(180, 130, 80, 30);
         txtInicial.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtInicial);
 
@@ -63,13 +62,12 @@ public class frm16 extends JFrame {
         getContentPane().add(lblMensual);
 
         txtMensual = new JTextField();
-        txtMensual.setBounds(180, 180, 100, 30);
-        txtMensual.setEditable(false);
+        txtMensual.setBounds(180, 180, 80, 30);
         txtMensual.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtMensual);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 220, 250, 30);
+        btnCalcular.setBounds(180, 230, 90, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
