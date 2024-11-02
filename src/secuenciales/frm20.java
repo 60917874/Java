@@ -10,8 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm20 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtCantidad;
-    JLabel lblBilletes;
+    JTextField txtCantidad, txtBilletes;
+    JLabel lblCantidad, lblBilletes;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -36,8 +36,8 @@ public class frm20 extends JFrame {
         lblCantidad.setBounds(50, 50, 120, 30);
         getContentPane().add(lblCantidad);
 
-        lblBilletes = new JLabel("Desglose:");
-        lblBilletes.setBounds(50, 150, 300, 150);
+        JLabel lblBilletes = new JLabel("Desglose:");
+        lblBilletes.setBounds(50, 90, 120, 30);
         getContentPane().add(lblBilletes);
 
         txtCantidad = new JTextField();
@@ -46,8 +46,14 @@ public class frm20 extends JFrame {
         txtCantidad.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtCantidad);
 
+        txtBilletes = new JTextField();
+        txtBilletes.setBounds(170, 90, 100, 30);
+        txtBilletes.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtBilletes.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtBilletes);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(50, 100, 220, 30);
+        btnCalcular.setBounds(170, 130, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
@@ -80,12 +86,12 @@ public class frm20 extends JFrame {
         int monedas1 = cantidad;
 
         lblBilletes.setText("Billetes de 200: " + billetes200 + "<br>" +
-                             "Billetes de 100: " + billetes100 + "<br>" +
-                             "Billetes de 50: " + billetes50 + "<br>" +
-                             "Billetes de 20: " + billetes20 + "<br>" +
-                             "Billetes de 10: " + billetes10 + "<br>" +
-                             "Monedas de 5: " + monedas5 + "<br>" +
-                             "Monedas de 2: " + monedas2 + "<br>" +
-                             "Monedas de 1: " + monedas1);
+                "Billetes de 100: " + billetes100 + "<br>" +
+                "Billetes de 50: " + billetes50 + "<br>" +
+                "Billetes de 20: " + billetes20 + "<br>" +
+                "Billetes de 10: " + billetes10 + "<br>" +
+                "Monedas de 5: " + monedas5 + "<br>" +
+                "Monedas de 2: " + monedas2 + "<br>" +
+                "Monedas de 1: " + monedas1);
     }
 }
