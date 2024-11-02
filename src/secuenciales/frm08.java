@@ -11,7 +11,7 @@ import javax.swing.SwingConstants;
 
 public class frm08 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtRadio, txtAltura;
+    JTextField txtRadio, txtAltura, txtAreaBase, txtAreaLateral, txtAreaTotal;
     JLabel lblAreaBase, lblAreaLateral, lblAreaTotal;
 
     public static void main(String[] args) {
@@ -34,39 +34,57 @@ public class frm08 extends JFrame {
         setLocationRelativeTo(null);
 
         JLabel lblRadio = new JLabel("Radio:");
-        lblRadio.setBounds(50, 50, 80, 30);
+        lblRadio.setBounds(50, 20, 80, 30);
         getContentPane().add(lblRadio);
 
         JLabel lblAltura = new JLabel("Altura:");
-        lblAltura.setBounds(50, 90, 80, 30);
+        lblAltura.setBounds(50, 60, 80, 30);
         getContentPane().add(lblAltura);
 
-        lblAreaBase = new JLabel("Área Base:");
-        lblAreaBase.setBounds(50, 130, 200, 30);
+        JLabel lblAreaBase = new JLabel("Área Base:");
+        lblAreaBase.setBounds(50, 100, 80, 30);
         getContentPane().add(lblAreaBase);
 
-        lblAreaLateral = new JLabel("Área Lateral:");
-        lblAreaLateral.setBounds(50, 170, 200, 30);
+        JLabel lblAreaLateral = new JLabel("Área Lateral:");
+        lblAreaLateral.setBounds(50, 140, 80, 30);
         getContentPane().add(lblAreaLateral);
 
-        lblAreaTotal = new JLabel("Área Total:");
-        lblAreaTotal.setBounds(50, 210, 200, 30);
+        JLabel lblAreaTotal = new JLabel("Área Total:");
+        lblAreaTotal.setBounds(50, 180, 80, 30);
         getContentPane().add(lblAreaTotal);
 
         txtRadio = new JTextField();
-        txtRadio.setBounds(130, 50, 60, 30);
+        txtRadio.setBounds(130, 20, 60, 30);
         txtRadio.setHorizontalAlignment(SwingConstants.RIGHT);
         txtRadio.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtRadio);
 
         txtAltura = new JTextField();
-        txtAltura.setBounds(130, 90, 60, 30);
+        txtAltura.setBounds(130, 60, 60, 30);
         txtAltura.setHorizontalAlignment(SwingConstants.RIGHT);
         txtAltura.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtAltura);
 
+        txtAreaBase = new JTextField();
+        txtAreaBase.setBounds(130, 100, 60, 30);
+        txtAreaBase.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtAreaBase.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtAreaBase);
+
+        txtAreaLateral = new JTextField();
+        txtAreaLateral.setBounds(130, 140, 60, 30);
+        txtAreaLateral.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtAreaLateral.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtAreaLateral);
+
+        txtAreaTotal = new JTextField();
+        txtAreaTotal.setBounds(130, 180, 60, 30);
+        txtAreaTotal.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtAreaTotal.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtAreaTotal);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(80, 250, 100, 30);
+        btnCalcular.setBounds(80, 230, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
