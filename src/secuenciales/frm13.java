@@ -10,8 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm13 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtCatetoA, txtCatetoB;
-    JLabel lblHipotenusa;
+    JTextField txtCatetoA, txtCatetoB, txtHipotenusa;
+    JLabel lblCatetoA, lblCatetoB, lblHipotenusa;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -40,8 +40,8 @@ public class frm13 extends JFrame {
         lblCatetoB.setBounds(50, 90, 80, 30);
         getContentPane().add(lblCatetoB);
 
-        lblHipotenusa = new JLabel("Hipotenusa:");
-        lblHipotenusa.setBounds(50, 150, 200, 30);
+        JLabel lblHipotenusa = new JLabel("Hipotenusa:");
+        lblHipotenusa.setBounds(50, 130, 200, 30);
         getContentPane().add(lblHipotenusa);
 
         txtCatetoA = new JTextField();
@@ -56,8 +56,14 @@ public class frm13 extends JFrame {
         txtCatetoB.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtCatetoB);
 
+        txtHipotenusa = new JTextField();
+        txtHipotenusa.setBounds(130, 130, 60, 30);
+        txtHipotenusa.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtHipotenusa.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtHipotenusa);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(80, 200, 100, 30);
+        btnCalcular.setBounds(80, 170, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
