@@ -11,8 +11,8 @@ import java.text.DecimalFormat;
 
 public class frm15 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtJuan, txtRosa, txtDaniel;
-    JLabel lblTotal, lblPJuan, lblPRosa, lblPDaniel;
+    JTextField txtJuan, txtRosa, txtDaniel, txtPJuan, txtPRosa, txtPDaniel, txtTotal;
+    JLabel lblJuan, lblRosa, lblDaniellblTotal, lblPJuan, lblPRosa, lblPDaniel, lblTotal;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -32,56 +32,80 @@ public class frm15 extends JFrame {
         setLocationRelativeTo(null);
 
         JLabel lblJuan = new JLabel("Aporte de Juan (USD):");
-        lblJuan.setBounds(50, 50, 150, 30);
+        lblJuan.setBounds(50, 20, 150, 30);
         getContentPane().add(lblJuan);
 
         JLabel lblRosa = new JLabel("Aporte de Rosa (USD):");
-        lblRosa.setBounds(50, 90, 150, 30);
+        lblRosa.setBounds(50, 60, 150, 30);
         getContentPane().add(lblRosa);
 
         JLabel lblDaniel = new JLabel("Aporte de Daniel (S/.):");
-        lblDaniel.setBounds(50, 130, 150, 30);
+        lblDaniel.setBounds(50, 90, 150, 30);
         getContentPane().add(lblDaniel);
 
-        lblTotal = new JLabel("Capital total en USD:");
+        JLabel lblPJuan = new JLabel("Porcentaje de Juan:");
+        lblPJuan.setBounds(50, 120, 200, 30);
+        getContentPane().add(lblPJuan);
+
+        JLabel lblPRosa = new JLabel("Porcentaje de Rosa:");
+        lblPRosa.setBounds(50, 150, 200, 30);
+        getContentPane().add(lblPRosa);
+
+        JLabel lblPDaniel = new JLabel("Porcentaje de Daniel:");
+        lblPDaniel.setBounds(50, 180, 200, 30);
+        getContentPane().add(lblPDaniel);
+
+        JLabel lblTotal = new JLabel("Capital total en USD:");
         lblTotal.setBounds(50, 210, 200, 30);
         getContentPane().add(lblTotal);
 
-        lblPJuan = new JLabel("Porcentaje de Juan:");
-        lblPJuan.setBounds(50, 240, 200, 30);
-        getContentPane().add(lblPJuan);
-
-        lblPRosa = new JLabel("Porcentaje de Rosa:");
-        lblPRosa.setBounds(50, 270, 200, 30);
-        getContentPane().add(lblPRosa);
-
-        lblPDaniel = new JLabel("Porcentaje de Daniel:");
-        lblPDaniel.setBounds(50, 300, 200, 30);
-        getContentPane().add(lblPDaniel);
-
         txtJuan = new JTextField();
-        txtJuan.setBounds(220, 50, 60, 30);
+        txtJuan.setBounds(220, 30, 60, 30);
         txtJuan.setHorizontalAlignment(SwingConstants.RIGHT);
         txtJuan.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtJuan);
 
         txtRosa = new JTextField();
-        txtRosa.setBounds(220, 90, 60, 30);
+        txtRosa.setBounds(220, 60, 60, 30);
         txtRosa.setHorizontalAlignment(SwingConstants.RIGHT);
         txtRosa.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtRosa);
 
         txtDaniel = new JTextField();
-        txtDaniel.setBounds(220, 130, 60, 30);
+        txtDaniel.setBounds(220, 90, 60, 30);
         txtDaniel.setHorizontalAlignment(SwingConstants.RIGHT);
         txtDaniel.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtDaniel);
 
+        txtPJuan = new JTextField();
+        txtPJuan.setBounds(220, 120, 60, 30);
+        txtPJuan.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtPJuan.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtPJuan);
+
+        txtPRosa = new JTextField();
+        txtPRosa.setBounds(220, 150, 60, 30);
+        txtPRosa.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtPRosa.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtPRosa);
+
+        txtPDaniel = new JTextField();
+        txtPDaniel.setBounds(220, 180, 60, 30);
+        txtPDaniel.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtPDaniel.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtPDaniel);
+
+        txtTotal = new JTextField();
+        txtTotal.setBounds(220, 210, 60, 30);
+        txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtTotal.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtTotal);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(150, 170, 100, 30);
+        btnCalcular.setBounds(150, 260, 100, 30);
         getContentPane().add(btnCalcular);
 
-        btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());   
+        btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
     }
 
     protected void btnCalcular_actionPerformed() {
@@ -96,7 +120,7 @@ public class frm15 extends JFrame {
         double PDaniel = (aporteDaniel / capitalTotal) * 100;
 
         DecimalFormat df = new DecimalFormat("#.##");
-        
+
         lblTotal.setText("Capital total: " + df.format(capitalTotal));
         lblPJuan.setText("Porcentaje Juan: " + df.format(PJuan) + "%");
         lblPRosa.setText("Porcentaje Rosa: " + df.format(PRosa) + "%");
