@@ -11,8 +11,10 @@ import javax.swing.SwingConstants;
 
 public class frm10 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtPrimeraNota, txtSegundaNota, txtTerceraNota, txtCuartaNota, txtQuintaNota;
-    JTextField txtNotaMayor, txtNotaMenor, txtPromedio;
+    JTextField txtPrimeraNota, txtSegundaNota, txtTerceraNota, txtCuartaNota, txtQuintaNota, txtNotaMayor, txtNotaMenor,
+            txtPromedio;
+    JLabel lblPrimeraNota, lblSegundaNota, lblTerceraNota, lblCuartaNota, lblQuintaNota, lblNotaMayor, lblNotaMenor,
+            lblPromedio;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
