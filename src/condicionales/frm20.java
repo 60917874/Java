@@ -35,7 +35,7 @@ public class frm20 extends JFrame {
         getContentPane().add(lblNumeroA);
 
         txtNumeroA = new JTextField();
-        txtNumeroA.setBounds(180, 30, 100, 30);
+        txtNumeroA.setBounds(130, 30, 80, 30);
         txtNumeroA.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtNumeroA);
 
@@ -44,7 +44,7 @@ public class frm20 extends JFrame {
         getContentPane().add(lblNumeroB);
 
         txtNumeroB = new JTextField();
-        txtNumeroB.setBounds(180, 80, 100, 30);
+        txtNumeroB.setBounds(130, 80, 80, 30);
         txtNumeroB.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtNumeroB);
 
@@ -53,7 +53,7 @@ public class frm20 extends JFrame {
         getContentPane().add(lblNumeroC);
 
         txtNumeroC = new JTextField();
-        txtNumeroC.setBounds(180, 130, 100, 30);
+        txtNumeroC.setBounds(130, 130, 80, 30);
         txtNumeroC.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtNumeroC);
 
@@ -62,20 +62,19 @@ public class frm20 extends JFrame {
         getContentPane().add(lblResultado);
 
         txtResultado = new JTextField();
-        txtResultado.setBounds(180, 180, 100, 30);
-        txtResultado.setEditable(false);
+        txtResultado.setBounds(130, 180, 80, 30);
         txtResultado.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtResultado);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 220, 250, 30);
+        btnCalcular.setBounds(120, 230, 110, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 btnCalcular_actionPerformed();
-                
+
             }
         });
     }
