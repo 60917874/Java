@@ -68,17 +68,15 @@ public class frm06 extends JFrame {
         txtMayor = new JTextField();
         txtMayor.setBounds(180, 170, 80, 30);
         txtMayor.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtMayor.setEditable(false);
         getContentPane().add(txtMayor);
 
         txtMenor = new JTextField();
         txtMenor.setBounds(180, 210, 80, 30);
         txtMenor.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtMenor.setEditable(false);
         getContentPane().add(txtMenor);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(80, 250, 100, 30);
+        btnCalcular.setBounds(170, 250, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
