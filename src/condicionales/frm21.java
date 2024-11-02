@@ -35,7 +35,7 @@ public class frm21 extends JFrame {
         getContentPane().add(lblNumero);
 
         txtNumero = new JTextField();
-        txtNumero.setBounds(180, 30, 100, 30);
+        txtNumero.setBounds(180, 30, 80, 30);
         txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtNumero);
 
@@ -44,8 +44,7 @@ public class frm21 extends JFrame {
         getContentPane().add(lblEstado);
 
         txtEstado = new JTextField();
-        txtEstado.setBounds(180, 80, 100, 30);
-        txtEstado.setEditable(false);
+        txtEstado.setBounds(180, 80, 80, 30);
         txtEstado.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtEstado);
 
@@ -54,8 +53,7 @@ public class frm21 extends JFrame {
         getContentPane().add(lblEdad);
 
         txtEdad = new JTextField();
-        txtEdad.setBounds(180, 130, 100, 30);
-        txtEdad.setEditable(false);
+        txtEdad.setBounds(180, 130, 80, 30);
         txtEdad.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtEdad);
 
@@ -64,13 +62,12 @@ public class frm21 extends JFrame {
         getContentPane().add(lblSexo);
 
         txtSexo = new JTextField();
-        txtSexo.setBounds(180, 180, 100, 30);
-        txtSexo.setEditable(false);
+        txtSexo.setBounds(180, 180, 80, 30);
         txtSexo.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtSexo);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 220, 250, 30);
+        btnCalcular.setBounds(180, 230, 90, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
@@ -86,7 +83,7 @@ public class frm21 extends JFrame {
 
         int estado = numero / 1000;
         int edad = (numero / 10) % 100;
-        int sexo = numero % 10; 
+        int sexo = numero % 10;
 
         String estadoStr;
         if (estado == 1) {
