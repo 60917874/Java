@@ -54,22 +54,20 @@ public class frm14 extends JFrame {
 
         txtDescuento = new JTextField();
         txtDescuento.setBounds(180, 130, 100, 30);
-        txtDescuento.setEditable(false);
         txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtDescuento);
 
-        JLabel lblTotal = new JLabel("Total a Pagar:");
+        JLabel lblTotal = new JLabel("Total:");
         lblTotal.setBounds(30, 180, 150, 30);
         getContentPane().add(lblTotal);
 
         txtTotal = new JTextField();
         txtTotal.setBounds(180, 180, 100, 30);
-        txtTotal.setEditable(false);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtTotal);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 220, 250, 30);
+        btnCalcular.setBounds(180, 230, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
@@ -84,7 +82,7 @@ public class frm14 extends JFrame {
         int tarjeta = Integer.parseInt(txtTarjeta.getText());
         double monto = Double.parseDouble(txtMonto.getText());
         double descuento;
-        
+
         if (tarjeta >= 100 && tarjeta % 2 == 0) {
             descuento = 0.15 * monto;
         } else {
