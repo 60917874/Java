@@ -10,7 +10,7 @@ import javax.swing.SwingConstants;
 
 public class frm17 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtDonacion;
+    JTextField txtDonacion, txtCentroSalud, txtComedorInfantil, txtEscuelaInfantil, txtAsiloAncianos;
     JLabel lblCentroSalud, lblComedorInfantil, lblEscuelaInfantil, lblAsiloAncianos;
 
     public static void main(String[] args) {
@@ -31,33 +31,57 @@ public class frm17 extends JFrame {
         setLocationRelativeTo(null);
 
         JLabel lblDonacion = new JLabel("Monto de la donación: ");
-        lblDonacion.setBounds(50, 50, 150, 30);
+        lblDonacion.setBounds(50, 20, 150, 30);
         getContentPane().add(lblDonacion);
 
-        lblCentroSalud = new JLabel("Centro de salud: ");
-        lblCentroSalud.setBounds(50, 120, 200, 30);
+        JLabel lblCentroSalud = new JLabel("Centro de salud: ");
+        lblCentroSalud.setBounds(50, 60, 200, 30);
         getContentPane().add(lblCentroSalud);
 
-        lblComedorInfantil = new JLabel("Comedor infantil: ");
-        lblComedorInfantil.setBounds(50, 150, 200, 30);
+        JLabel lblComedorInfantil = new JLabel("Comedor infantil: ");
+        lblComedorInfantil.setBounds(50, 100, 200, 30);
         getContentPane().add(lblComedorInfantil);
 
-        lblEscuelaInfantil = new JLabel("Escuela infantil: ");
-        lblEscuelaInfantil.setBounds(50, 180, 200, 30);
+        JLabel lblEscuelaInfantil = new JLabel("Escuela infantil: ");
+        lblEscuelaInfantil.setBounds(50, 140, 200, 30);
         getContentPane().add(lblEscuelaInfantil);
 
-        lblAsiloAncianos = new JLabel("Asilo de ancianos: ");
-        lblAsiloAncianos.setBounds(50, 210, 200, 30);
+        JLabel lblAsiloAncianos = new JLabel("Asilo de ancianos: ");
+        lblAsiloAncianos.setBounds(50, 180, 200, 30);
         getContentPane().add(lblAsiloAncianos);
 
         txtDonacion = new JTextField();
-        txtDonacion.setBounds(220, 50, 100, 30);
+        txtDonacion.setBounds(220, 20, 100, 30);
         txtDonacion.setHorizontalAlignment(SwingConstants.RIGHT);
         txtDonacion.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtDonacion);
 
+        txtCentroSalud = new JTextField();
+        txtCentroSalud.setBounds(220, 60, 100, 30);
+        txtCentroSalud.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtCentroSalud.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtCentroSalud);
+
+        txtComedorInfantil = new JTextField();
+        txtComedorInfantil.setBounds(220, 100, 100, 30);
+        txtComedorInfantil.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtComedorInfantil.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtComedorInfantil);
+
+        txtEscuelaInfantil = new JTextField();
+        txtEscuelaInfantil.setBounds(220, 140, 100, 30);
+        txtEscuelaInfantil.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtEscuelaInfantil.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtEscuelaInfantil);
+
+        txtAsiloAncianos = new JTextField();
+        txtAsiloAncianos.setBounds(220, 180, 100, 30);
+        txtAsiloAncianos.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtAsiloAncianos.setMargin(new Insets(5, 5, 5, 5));
+        getContentPane().add(txtAsiloAncianos);
+
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(150, 90, 100, 30);
+        btnCalcular.setBounds(150, 220, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
