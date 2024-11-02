@@ -35,7 +35,7 @@ public class frm18 extends JFrame {
         getContentPane().add(lblDonacion);
 
         txtDonacion = new JTextField();
-        txtDonacion.setBounds(180, 30, 100, 30);
+        txtDonacion.setBounds(180, 30, 80, 30);
         txtDonacion.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtDonacion);
 
@@ -44,8 +44,7 @@ public class frm18 extends JFrame {
         getContentPane().add(lblCentroS);
 
         txtCentroS = new JTextField();
-        txtCentroS.setBounds(180, 80, 100, 30);
-        txtCentroS.setEditable(false);
+        txtCentroS.setBounds(180, 80, 80, 30);
         txtCentroS.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCentroS);
 
@@ -54,8 +53,7 @@ public class frm18 extends JFrame {
         getContentPane().add(lblComedor);
 
         txtComedor = new JTextField();
-        txtComedor.setBounds(180, 130, 100, 30);
-        txtComedor.setEditable(false);
+        txtComedor.setBounds(180, 130, 80, 30);
         txtComedor.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtComedor);
 
@@ -64,13 +62,12 @@ public class frm18 extends JFrame {
         getContentPane().add(lblInversion);
 
         txtInversion = new JTextField();
-        txtInversion.setBounds(180, 180, 100, 30);
-        txtInversion.setEditable(false);
+        txtInversion.setBounds(180, 180, 80, 30);
         txtInversion.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtInversion);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(30, 230, 250, 30);
+        btnCalcular.setBounds(180, 230, 90, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
