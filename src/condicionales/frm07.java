@@ -64,7 +64,6 @@ public class frm07 extends JFrame {
         txtIntermedio = new JTextField();
         txtIntermedio.setBounds(180, 170, 80, 30);
         txtIntermedio.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtIntermedio.setEditable(false);
         getContentPane().add(txtIntermedio);
 
         JButton btnCalcular = new JButton("Calcular");
@@ -86,8 +85,11 @@ public class frm07 extends JFrame {
 
         int intermedio;
 
-        intermedio = (primernumero > segundonumero ? (primernumero < tercernumero ? primernumero : (segundonumero > tercernumero ? segundonumero : tercernumero)) :
-                     (primernumero > tercernumero ? primernumero : (segundonumero < tercernumero ? segundonumero : tercernumero)));
+        intermedio = (primernumero > segundonumero
+                ? (primernumero < tercernumero ? primernumero
+                        : (segundonumero > tercernumero ? segundonumero : tercernumero))
+                : (primernumero > tercernumero ? primernumero
+                        : (segundonumero < tercernumero ? segundonumero : tercernumero)));
 
         txtIntermedio.setText(String.valueOf(intermedio));
     }
