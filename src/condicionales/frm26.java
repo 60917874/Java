@@ -50,34 +50,31 @@ public class frm26 extends JFrame {
         getContentPane().add(lblDinero);
 
         txtTotal = new JTextField();
-        txtTotal.setBounds(150, 30, 100, 30);
+        txtTotal.setBounds(150, 30, 80, 30);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
         txtTotal.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtTotal);
 
         txtPrestamo = new JTextField();
-        txtPrestamo.setBounds(150, 80, 100, 30);
+        txtPrestamo.setBounds(150, 80, 80, 30);
         txtPrestamo.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPrestamo.setMargin(new Insets(5, 5, 5, 5));
-        txtPrestamo.setEditable(false);
         getContentPane().add(txtPrestamo);
 
         txtInteres = new JTextField();
-        txtInteres.setBounds(150, 130, 100, 30);
+        txtInteres.setBounds(150, 130, 80, 30);
         txtInteres.setHorizontalAlignment(SwingConstants.RIGHT);
         txtInteres.setMargin(new Insets(5, 5, 5, 5));
-        txtInteres.setEditable(false);
         getContentPane().add(txtInteres);
 
         txtDinero = new JTextField();
-        txtDinero.setBounds(150, 180, 100, 30);
+        txtDinero.setBounds(150, 180, 80, 30);
         txtDinero.setHorizontalAlignment(SwingConstants.RIGHT);
         txtDinero.setMargin(new Insets(5, 5, 5, 5));
-        txtDinero.setEditable(false);
         getContentPane().add(txtDinero);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 220, 100, 30);
+        btnCalcular.setBounds(90, 230, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
