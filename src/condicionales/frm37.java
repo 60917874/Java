@@ -62,7 +62,6 @@ public class frm37 extends JFrame {
 
         txtResultado = new JTextField();
         txtResultado.setBounds(150, 150, 150, 30);
-        txtResultado.setEditable(false);
         getContentPane().add(txtResultado);
 
         JButton btnCalcular = new JButton("Calcular");
@@ -89,9 +88,9 @@ public class frm37 extends JFrame {
 
         if (pamela == carol && carol == fanny) {
             resultado = "Elección anulada por empate.";
-        } else if ((pamela == carol && pamela > fanny) || 
-                   (pamela == fanny && pamela > carol) || 
-                   (carol == fanny && carol > pamela)) {
+        } else if ((pamela == carol && pamela > fanny) ||
+                (pamela == fanny && pamela > carol) ||
+                (carol == fanny && carol > pamela)) {
             resultado = "Anulada";
         } else if (pamela >= medio) {
             resultado = "Pamela gana.";
