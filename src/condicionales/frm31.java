@@ -37,20 +37,20 @@ public class frm31 extends JFrame {
         lblHoras.setBounds(50, 50, 120, 30);
         getContentPane().add(lblHoras);
 
-        JLabel lblCategoria = new JLabel("Categoría (A-D):");
+        JLabel lblCategoria = new JLabel("Categoría:");
         lblCategoria.setBounds(50, 90, 120, 30);
         getContentPane().add(lblCategoria);
 
         JLabel lblBruto = new JLabel("Sueldo Bruto:");
-        lblBruto.setBounds(50, 170, 120, 30);
+        lblBruto.setBounds(50, 130, 120, 30);
         getContentPane().add(lblBruto);
 
         JLabel lblDescuento = new JLabel("Descuento:");
-        lblDescuento.setBounds(50, 210, 120, 30);
+        lblDescuento.setBounds(50, 170, 120, 30);
         getContentPane().add(lblDescuento);
 
         JLabel lblNeto = new JLabel("Sueldo Neto:");
-        lblNeto.setBounds(50, 250, 120, 30);
+        lblNeto.setBounds(50, 210, 120, 30);
         getContentPane().add(lblNeto);
 
         txtHoras = new JTextField();
@@ -66,28 +66,25 @@ public class frm31 extends JFrame {
         getContentPane().add(txtCategoria);
 
         txtBruto = new JTextField();
-        txtBruto.setBounds(180, 170, 60, 30);
+        txtBruto.setBounds(180, 130, 60, 30);
         txtBruto.setHorizontalAlignment(SwingConstants.RIGHT);
         txtBruto.setMargin(new Insets(5, 5, 5, 5));
-        txtBruto.setEditable(false);
         getContentPane().add(txtBruto);
 
         txtDescuento = new JTextField();
-        txtDescuento.setBounds(180, 210, 60, 30);
+        txtDescuento.setBounds(180, 170, 60, 30);
         txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
         txtDescuento.setMargin(new Insets(5, 5, 5, 5));
-        txtDescuento.setEditable(false);
         getContentPane().add(txtDescuento);
 
         txtNeto = new JTextField();
-        txtNeto.setBounds(180, 250, 60, 30);
+        txtNeto.setBounds(180, 210, 60, 30);
         txtNeto.setHorizontalAlignment(SwingConstants.RIGHT);
         txtNeto.setMargin(new Insets(5, 5, 5, 5));
-        txtNeto.setEditable(false);
         getContentPane().add(txtNeto);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 130, 100, 30);
+        btnCalcular.setBounds(90, 250, 100, 30);
         btnCalcular.setMnemonic('a');
         getContentPane().add(btnCalcular);
 
@@ -116,13 +113,13 @@ public class frm31 extends JFrame {
 
         double bruto = horasTrabajadas * horas;
         double descuento;
-        
+
         if (bruto > 2500) {
             descuento = bruto * 0.20;
         } else {
             descuento = bruto * 0.15;
         }
-        
+
         double neto = bruto - descuento;
 
         txtBruto.setText(String.format("S/ %.2f", bruto));
