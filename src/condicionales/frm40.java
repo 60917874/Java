@@ -87,17 +87,15 @@ public class frm40 extends JFrame {
 
         txtPromedio = new JTextField();
         txtPromedio.setBounds(150, 230, 60, 30);
-        txtPromedio.setEditable(false);
         txtPromedio.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtPromedio);
 
         txtCondicion = new JTextField();
-        txtCondicion.setBounds(150, 270, 100, 30);
-        txtCondicion.setEditable(false);
+        txtCondicion.setBounds(150, 270, 90, 30);
         getContentPane().add(txtCondicion);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(230, 200, 100, 30);
+        btnCalcular.setBounds(140, 310, 90, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
