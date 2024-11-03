@@ -6,7 +6,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
 public class frm01 extends JFrame {
     static final long serialVersionUID = 1L;
@@ -54,7 +53,6 @@ public class frm01 extends JFrame {
         getContentPane().add(lblCociente);
 
         txtCociente = new JTextField();
-        txtCociente.setFocusable(false);
         txtCociente.setBounds(150, 150, 100, 30);
         getContentPane().add(txtCociente);
 
@@ -63,7 +61,6 @@ public class frm01 extends JFrame {
         getContentPane().add(lblResto);
 
         txtResto = new JTextField();
-        txtResto.setFocusable(false);
         txtResto.setBounds(150, 200, 100, 30);
         getContentPane().add(txtResto);
 
@@ -86,13 +83,13 @@ public class frm01 extends JFrame {
 
         int[] resultado = dividir(dividendo, divisor);
         txtCociente.setText(String.valueOf(resultado[0]));
-        txtResto.setText(String.valueOf(resultado[1])); 
+        txtResto.setText(String.valueOf(resultado[1]));
     }
 
     int[] dividir(int dividendo, int divisor) {
 
         int[] resultado = new int[2];
-        
+
         if (dividendo < divisor) {
             resultado[0] = 0;
             resultado[1] = dividendo;
