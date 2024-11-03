@@ -5,12 +5,14 @@ import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 public class frm10 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtResultado, txtCantidad;
+    JTextArea txtResultado;
+    JTextField txtCantidad;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -35,10 +37,8 @@ public class frm10 extends JFrame {
         lblResultado.setBounds(50, 50, 150, 30);
         getContentPane().add(lblResultado);
 
-        txtResultado = new JTextField();
+        txtResultado = new JTextArea();
         txtResultado.setBounds(50, 90, 200, 200);
-        txtResultado.setFocusable(false);
-        txtResultado.setHorizontalAlignment(SwingConstants.LEFT);
         txtResultado.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtResultado);
 
@@ -48,7 +48,6 @@ public class frm10 extends JFrame {
 
         txtCantidad = new JTextField();
         txtCantidad.setBounds(200, 310, 50, 30);
-        txtCantidad.setFocusable(false);
         txtCantidad.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCantidad);
 
@@ -67,20 +66,18 @@ public class frm10 extends JFrame {
 
     String numeros() {
         String resultado = "";
-        int contador = 0;
 
         for (int i = 1000; i < 10000; i++) {
-            int digito1 = (i / 1000) % 10;
-            int digito2 = (i / 100) % 10;
-            int digito3 = (i / 10) % 10;
-            int digito4 = i % 10; 
+            int primerDigito = (i / 1000) % 10;
+            int segundoDigito = (i / 100) % 10;
+            int tercerDigito = (i / 10) % 10;
+            int cuartoDigito = i % 10;
 
             int pares = segundoDigito + cuartoDigito;
             int impares = primerDigito + tercerDigito;
 
             if (pares == impares) {
                 resultado += i + "\n";
-                contador++;
             }
         }
 
@@ -96,10 +93,6 @@ public class frm10 extends JFrame {
             }
         }
 
-        if (!resultado.isEmpty()) {
-            total++;
-        }
-        
         return total;
     }
 }
