@@ -48,8 +48,7 @@ public class frm35 extends JFrame {
         getContentPane().add(lblTipo);
 
         txtTipo = new JTextField();
-        txtTipo.setBounds(180, 90, 120, 30);
-        txtTipo.setEditable(false);
+        txtTipo.setBounds(180, 90, 90, 30);
         getContentPane().add(txtTipo);
 
         JButton btnCalcular = new JButton("Determinar");
