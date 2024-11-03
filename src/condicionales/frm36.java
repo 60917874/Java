@@ -49,11 +49,10 @@ public class frm36 extends JFrame {
 
         txtLapiceros = new JTextField();
         txtLapiceros.setBounds(200, 90, 60, 30);
-        txtLapiceros.setEditable(false);
         getContentPane().add(txtLapiceros);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 130, 120, 30);
+        btnCalcular.setBounds(90, 140, 120, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
