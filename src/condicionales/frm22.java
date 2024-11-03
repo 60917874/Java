@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 public class frm22 extends JFrame {
     private static final long serialVersionUID = 1L;
     JTextField txtUnidadesA, txtUnidadesB, txtCompraA, txtCompraB, txtDescuento, txtTotal;
+    JLabel lblUnidadesA, lblUnidadesB, lblCompraA, lblCompraB, lblDescuento, lblTotal;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -58,13 +59,13 @@ public class frm22 extends JFrame {
         getContentPane().add(lblTotal);
 
         txtUnidadesA = new JTextField();
-        txtUnidadesA.setBounds(150, 30, 60, 30);
+        txtUnidadesA.setBounds(150, 30, 80, 30);
         txtUnidadesA.setHorizontalAlignment(SwingConstants.RIGHT);
         txtUnidadesA.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtUnidadesA);
 
         txtUnidadesB = new JTextField();
-        txtUnidadesB.setBounds(150, 70, 60, 30);
+        txtUnidadesB.setBounds(150, 70, 80, 30);
         txtUnidadesB.setHorizontalAlignment(SwingConstants.RIGHT);
         txtUnidadesB.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtUnidadesB);
@@ -94,7 +95,7 @@ public class frm22 extends JFrame {
         getContentPane().add(txtTotal);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(80, 270, 100, 30);
+        btnCalcular.setBounds(150, 270, 90, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
@@ -108,20 +109,20 @@ public class frm22 extends JFrame {
     protected void btnCalcular_actionPerformed() {
         int unidadesA = Integer.parseInt(txtUnidadesA.getText());
         int unidadesB = Integer.parseInt(txtUnidadesB.getText());
-        
+
         double precioA = 25.0;
         double precioB = 30.0;
-        double compraA = unidadA * precioA;
-        double compraB = unidadB * precioB;
+        double compraA = unidadesA * precioA;
+        double compraB = unidadesB * precioB;
 
         double descuentoA = 0.0;
         double descuentoB = 0.0;
 
-        if (unidadA > 50) {
+        if (unidadesA > 50) {
             descuentoA = compraA * 0.15;
         }
 
-        if (unidadB > 60) {
+        if (unidadesB > 60) {
             descuentoB = compraB * 0.10;
         }
 
