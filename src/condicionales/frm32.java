@@ -42,15 +42,15 @@ public class frm32 extends JFrame {
         getContentPane().add(lblPromedio);
 
         JLabel lblPActual = new JLabel("Pensión Actual:");
-        lblPActual.setBounds(50, 170, 120, 30);
+        lblPActual.setBounds(50, 130, 120, 30);
         getContentPane().add(lblPActual);
 
         JLabel lblDescuento = new JLabel("Descuento:");
-        lblDescuento.setBounds(50, 210, 120, 30);
+        lblDescuento.setBounds(50, 170, 120, 30);
         getContentPane().add(lblDescuento);
 
         JLabel lblPNueva = new JLabel("Pension Nueva:");
-        lblPNueva.setBounds(50, 250, 120, 30);
+        lblPNueva.setBounds(50, 210, 120, 30);
         getContentPane().add(lblPNueva);
 
         txtCategoria = new JTextField();
@@ -66,28 +66,25 @@ public class frm32 extends JFrame {
         getContentPane().add(txtPromedio);
 
         txtPActual = new JTextField();
-        txtPActual.setBounds(180, 170, 60, 30);
+        txtPActual.setBounds(180, 130, 60, 30);
         txtPActual.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPActual.setMargin(new Insets(5, 5, 5, 5));
-        txtPActual.setEditable(false);
         getContentPane().add(txtPActual);
 
         txtDescuento = new JTextField();
-        txtDescuento.setBounds(180, 210, 60, 30);
+        txtDescuento.setBounds(180, 170, 60, 30);
         txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
         txtDescuento.setMargin(new Insets(5, 5, 5, 5));
-        txtDescuento.setEditable(false);
         getContentPane().add(txtDescuento);
 
         txtPNueva = new JTextField();
-        txtPNueva.setBounds(180, 250, 60, 30);
+        txtPNueva.setBounds(180, 210, 60, 30);
         txtPNueva.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPNueva.setMargin(new Insets(5, 5, 5, 5));
-        txtPNueva.setEditable(false);
         getContentPane().add(txtPNueva);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 130, 100, 30);
+        btnCalcular.setBounds(90, 260, 100, 30);
         btnCalcular.setMnemonic('a');
         getContentPane().add(btnCalcular);
 
@@ -107,22 +104,26 @@ public class frm32 extends JFrame {
 
         if (categoria == 'A') {
             pActual = 550;
-            if (promedio >= 0 && promedio <= 13.99) descuento = 0;
+            if (promedio >= 0 && promedio <= 13.99)
+                descuento = 0;
         } else if (categoria == 'B') {
             pActual = 500;
-            if (promedio >= 14 && promedio <= 15.99) descuento = 0.10 * peActual;
+            if (promedio >= 14 && promedio <= 15.99)
+                descuento = 0.10 * pActual;
         } else if (categoria == 'C') {
             pActual = 450;
-            if (promedio >= 16 && promedio <= 17.99) descuento = 0.12 * pActual;
+            if (promedio >= 16 && promedio <= 17.99)
+                descuento = 0.12 * pActual;
         } else if (categoria == 'D') {
             pActual = 400;
-            if (promedio >= 18 && promedio <= 20) descuento = 0.15 * pActual;
+            if (promedio >= 18 && promedio <= 20)
+                descuento = 0.15 * pActual;
         }
 
         double pNueva = pActual - descuento;
 
         txtPActual.setText(String.format("S/ %.2f", pActual));
         txtDescuento.setText(String.format("S/ %.2f", descuento));
-        txtNPension.setText(String.format("S/ %.2f", pNueva));
+        txtPNueva.setText(String.format("S/ %.2f", pNueva));
     }
 }
