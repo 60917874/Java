@@ -65,12 +65,10 @@ public class frm34 extends JFrame {
         txtIMC.setBounds(180, 130, 60, 30);
         txtIMC.setHorizontalAlignment(SwingConstants.RIGHT);
         txtIMC.setMargin(new Insets(5, 5, 5, 5));
-        txtIMC.setEditable(false);
         getContentPane().add(txtIMC);
 
         txtGrado = new JTextField();
         txtGrado.setBounds(180, 170, 120, 30);
-        txtGrado.setEditable(false);
         getContentPane().add(txtGrado);
 
         JButton btnCalcular = new JButton("Calcular");
@@ -93,7 +91,7 @@ public class frm34 extends JFrame {
         String grado;
 
         if (imc < 20) {
-            grado= "Delgado";
+            grado = "Delgado";
         } else if (imc >= 20 && imc < 25) {
             grado = "Normal";
         } else if (imc >= 25 && imc < 27) {
