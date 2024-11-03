@@ -1,7 +1,6 @@
 package condicionales;
 
 import java.awt.EventQueue;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -54,30 +53,27 @@ public class frm29 extends JFrame {
         getContentPane().add(lblTotal);
 
         txtHoras = new JTextField();
-        txtHoras.setBounds(160, 30, 100, 30);
+        txtHoras.setBounds(160, 30, 90, 30);
         txtHoras.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtHoras);
 
         txtPagoHora = new JTextField();
-        txtPagoHora.setBounds(160, 80, 100, 30);
+        txtPagoHora.setBounds(160, 80, 80, 30);
         txtPagoHora.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtPagoHora);
 
         txtSBruto = new JTextField();
-        txtSBruto.setBounds(160, 130, 100, 30);
-        txtSBruto.setEditable(false);
+        txtSBruto.setBounds(160, 130, 80, 30);
         txtSBruto.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtSBruto);
 
         txtDescuento = new JTextField();
-        txtDescuento.setBounds(160, 180, 100, 30);
-        txtDescuento.setEditable(false);
+        txtDescuento.setBounds(160, 180, 80, 30);
         txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtDescuento);
 
         txtTotal = new JTextField();
-        txtTotal.setBounds(160, 230, 100, 30);
-        txtTotal.setEditable(false);
+        txtTotal.setBounds(160, 230, 80, 30);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtTotal);
 
