@@ -50,33 +50,31 @@ public class frm25 extends JFrame {
         getContentPane().add(lblSNeto);
 
         txtSBruto = new JTextField();
-        txtSBruto.setBounds(150, 30, 100, 30);
+        txtSBruto.setBounds(150, 30, 80, 30);
         txtSBruto.setHorizontalAlignment(SwingConstants.RIGHT);
         txtSBruto.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtSBruto);
 
         txtNumeroH = new JTextField();
-        txtNumeroH.setBounds(150, 80, 100, 30);
+        txtNumeroH.setBounds(150, 80, 80, 30);
         txtNumeroH.setHorizontalAlignment(SwingConstants.RIGHT);
         txtNumeroH.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumeroH);
 
         txtBonificacion = new JTextField();
-        txtBonificacion.setBounds(150, 130, 100, 30);
+        txtBonificacion.setBounds(150, 130, 80, 30);
         txtBonificacion.setHorizontalAlignment(SwingConstants.RIGHT);
         txtBonificacion.setMargin(new Insets(5, 5, 5, 5));
-        txtBonificacion.setEditable(false);
         getContentPane().add(txtBonificacion);
 
         txtSNeto = new JTextField();
-        txtSNeto.setBounds(150, 180, 100, 30);
+        txtSNeto.setBounds(150, 180, 80, 30);
         txtSNeto.setHorizontalAlignment(SwingConstants.RIGHT);
         txtSNeto.setMargin(new Insets(5, 5, 5, 5));
-        txtSNeto.setEditable(false);
         getContentPane().add(txtSNeto);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 220, 100, 30);
+        btnCalcular.setBounds(90, 230, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
