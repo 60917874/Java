@@ -43,14 +43,14 @@ public class frm09 extends JFrame {
         getContentPane().add(txtAltura);
 
         txtResultado = new JTextField();
-        txtResultado.setBounds(50, 100, 200, 150);
+        txtResultado.setBounds(50, 100, 200, 100);
         txtResultado.setFocusable(false);
         txtResultado.setHorizontalAlignment(SwingConstants.LEFT);
         txtResultado.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtResultado);
 
         JButton btnGenerar = new JButton("Generar");
-        btnGenerar.setBounds(100, 260, 100, 30);
+        btnGenerar.setBounds(100, 220, 100, 30);
         getContentPane().add(btnGenerar);
 
         btnGenerar.addActionListener(e -> btnGenerar_actionPerformed());
