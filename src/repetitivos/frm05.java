@@ -36,17 +36,17 @@ public class frm05 extends JFrame {
         getContentPane().add(lblNumero);
 
         JLabel lblResultado = new JLabel("Tabla de Multiplicar:");
-        lblResultado.setBounds(50, 130, 150, 30);
+        lblResultado.setBounds(50, 90, 150, 30);
         getContentPane().add(lblResultado);
 
         txtNumero = new JTextField();
-        txtNumero.setBounds(150, 50, 60, 30);
+        txtNumero.setBounds(120, 50, 60, 30);
         txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         txtNumero.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumero);
 
         txtResultado = new JTextField();
-        txtResultado.setBounds(50, 170, 200, 60);
+        txtResultado.setBounds(50, 120, 200, 100);
         txtResultado.setFocusable(false);
         txtResultado.setHorizontalAlignment(SwingConstants.LEFT);
         txtResultado.setMargin(new Insets(5, 5, 5, 5));
