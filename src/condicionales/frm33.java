@@ -42,19 +42,19 @@ public class frm33 extends JFrame {
         getContentPane().add(lblObservaciones);
 
         JLabel lblPuntualidad = new JLabel("Puntualidad:");
-        lblPuntualidad.setBounds(50, 170, 150, 30);
+        lblPuntualidad.setBounds(50, 130, 150, 30);
         getContentPane().add(lblPuntualidad);
 
         JLabel lblRendimiento = new JLabel("Rendimiento:");
-        lblRendimiento.setBounds(50, 210, 150, 30);
+        lblRendimiento.setBounds(50, 170, 150, 30);
         getContentPane().add(lblRendimiento);
 
         JLabel lblTotal = new JLabel("Total:");
-        lblTotal.setBounds(50, 250, 150, 30);
+        lblTotal.setBounds(50, 210, 150, 30);
         getContentPane().add(lblTotal);
 
         JLabel lblBonificacion = new JLabel("Bonificación:");
-        lblBonificacion.setBounds(50, 290, 150, 30);
+        lblBonificacion.setBounds(50, 250, 150, 30);
         getContentPane().add(lblBonificacion);
 
         txtTardanza = new JTextField();
@@ -70,35 +70,31 @@ public class frm33 extends JFrame {
         getContentPane().add(txtObservaciones);
 
         txtPuntualidad = new JTextField();
-        txtPuntualidad.setBounds(180, 170, 60, 30);
+        txtPuntualidad.setBounds(180, 130, 60, 30);
         txtPuntualidad.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPuntualidad.setMargin(new Insets(5, 5, 5, 5));
-        txtPuntualidad.setEditable(false);
         getContentPane().add(txtPuntualidad);
 
         txtRendimiento = new JTextField();
-        txtRendimiento.setBounds(180, 210, 60, 30);
+        txtRendimiento.setBounds(180, 170, 60, 30);
         txtRendimiento.setHorizontalAlignment(SwingConstants.RIGHT);
         txtRendimiento.setMargin(new Insets(5, 5, 5, 5));
-        txtRendimiento.setEditable(false);
         getContentPane().add(txtRendimiento);
 
         txtTotal = new JTextField();
-        txtTotal.setBounds(180, 250, 60, 30);
+        txtTotal.setBounds(180, 210, 60, 30);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
         txtTotal.setMargin(new Insets(5, 5, 5, 5));
-        txtTotal.setEditable(false);
         getContentPane().add(txtTotal);
 
         txtBonificacion = new JTextField();
-        txtBonificacion.setBounds(180, 290, 60, 30);
+        txtBonificacion.setBounds(180, 250, 60, 30);
         txtBonificacion.setHorizontalAlignment(SwingConstants.RIGHT);
         txtBonificacion.setMargin(new Insets(5, 5, 5, 5));
-        txtBonificacion.setEditable(false);
         getContentPane().add(txtBonificacion);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 130, 100, 30);
+        btnCalcular.setBounds(90, 300, 100, 30);
         btnCalcular.setMnemonic('a');
         getContentPane().add(btnCalcular);
 
@@ -113,8 +109,8 @@ public class frm33 extends JFrame {
     protected void btnCalcular_actionPerformed() {
         int tardanza = Integer.parseInt(txtTardanza.getText());
         int observaciones = Integer.parseInt(txtObservaciones.getText());
-        int puntualidadPuntualidad = 0;
-        int puntualidadRendimiento = 0;
+        int puntualidad = 0;
+        int rendimiento = 0;
         double bonificacion = 0;
 
         if (tardanza == 0) {
@@ -141,7 +137,7 @@ public class frm33 extends JFrame {
             rendimiento = 0;
         }
 
-        int total = puntualidad+ rendimiento;
+        int total = puntualidad + rendimiento;
 
         if (total < 11) {
             bonificacion = 2.5 * total;
