@@ -36,11 +36,10 @@ public class frm12 extends JFrame {
 
         txtNumeros = new JTextArea();
         txtNumeros.setBounds(50, 60, 200, 150);
-        txtNumeros.setFocusable(false);
         txtNumeros.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumeros);
 
-        JButton btnCalcular = new JButton("Mostrar");
+        JButton btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(80, 220, 140, 30);
         getContentPane().add(btnCalcular);
 
