@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 public class frm24 extends JFrame {
     private static final long serialVersionUID = 1L;
     JTextField txtVendido, txtSueldo;
+    JLabel lblVendido, lblSueldo;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -42,16 +43,15 @@ public class frm24 extends JFrame {
         getContentPane().add(lblSueldo);
 
         txtVendido = new JTextField();
-        txtVendido.setBounds(150, 30, 100, 30);
+        txtVendido.setBounds(150, 30, 70, 30);
         txtVendido.setHorizontalAlignment(SwingConstants.RIGHT);
         txtVendido.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtVendido);
 
         txtSueldo = new JTextField();
-        txtSueldo.setBounds(150, 80, 100, 30);
+        txtSueldo.setBounds(150, 80, 70, 30);
         txtSueldo.setHorizontalAlignment(SwingConstants.RIGHT);
         txtSueldo.setMargin(new Insets(5, 5, 5, 5));
-        txtSueldo.setEditable(false);
         getContentPane().add(txtSueldo);
 
         JButton btnCalcular = new JButton("Calcular");
@@ -67,8 +67,8 @@ public class frm24 extends JFrame {
     }
 
     protected void btnCalcular_actionPerformed() {
-        double vendido = Double.parseDouble(txtvendido.getText());
-        
+        double vendido = Double.parseDouble(txtVendido.getText());
+
         double sueldoInicial = vendido * 0.10;
         double sueldoAdicional = 0;
 
@@ -78,7 +78,7 @@ public class frm24 extends JFrame {
         }
 
         double sueldoTotal = sueldoInicial + sueldoAdicional;
-        
+
         txtSueldo.setText(String.format("S/ %.2f", sueldoTotal));
     }
 }
