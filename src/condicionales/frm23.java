@@ -70,31 +70,31 @@ public class frm23 extends JFrame {
         getContentPane().add(txtNotaF);
 
         txtMatematica = new JTextField();
-        txtMatematica.setBounds(180, 110, 80, 30);
+        txtMatematica.setBounds(180, 110, 60, 30);
         txtMatematica.setHorizontalAlignment(SwingConstants.RIGHT);
         txtMatematica.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtMatematica);
 
         txtFisica = new JTextField();
-        txtFisica.setBounds(180, 150, 80, 30);
+        txtFisica.setBounds(180, 150, 60, 30);
         txtFisica.setHorizontalAlignment(SwingConstants.RIGHT);
         txtFisica.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtFisica);
 
         txtPromedio = new JTextField();
-        txtPromedio.setBounds(180, 190, 80, 30);
+        txtPromedio.setBounds(180, 190, 60, 30);
         txtPromedio.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPromedio.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtPromedio);
 
         txtObsequio = new JTextField();
-        txtObsequio.setBounds(180, 230, 80, 30);
+        txtObsequio.setBounds(180, 230, 60, 30);
         txtObsequio.setHorizontalAlignment(SwingConstants.RIGHT);
         txtObsequio.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtObsequio);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(80, 270, 100, 30);
+        btnCalcular.setBounds(100, 270, 120, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
