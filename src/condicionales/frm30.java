@@ -45,18 +45,17 @@ public class frm30 extends JFrame {
         getContentPane().add(lblTotal);
 
         txtCuota = new JTextField();
-        txtCuota.setBounds(160, 30, 100, 30);
+        txtCuota.setBounds(160, 30, 80, 30);
         txtCuota.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCuota);
 
         txtPago = new JTextField();
-        txtPago.setBounds(160, 80, 100, 30);
+        txtPago.setBounds(160, 80, 80, 30);
         txtPago.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtPago);
 
         txtTotal = new JTextField();
-        txtTotal.setBounds(160, 130, 100, 30);
-        txtTotal.setEditable(false);
+        txtTotal.setBounds(160, 130, 80, 30);
         txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtTotal);
 
