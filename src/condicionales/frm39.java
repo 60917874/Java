@@ -42,7 +42,7 @@ public class frm39 extends JFrame {
         getContentPane().add(lblTDefectuoso);
 
         JLabel lblTNoDefectuoso = new JLabel("Tornillos no defectuoso:");
-        lblTNoDefectuoso.setBounds(30, 110, 130, 30);
+        lblTNoDefectuoso.setBounds(30, 110, 150, 30);
         getContentPane().add(lblTNoDefectuoso);
 
         JLabel lblGrado = new JLabel("Grado:");
@@ -69,7 +69,6 @@ public class frm39 extends JFrame {
 
         txtGrado = new JTextField();
         txtGrado.setBounds(180, 150, 60, 30);
-        txtGrado.setEditable(false);
         txtGrado.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtGrado);
 
@@ -89,7 +88,7 @@ public class frm39 extends JFrame {
         double hora = Double.parseDouble(txtHora.getText());
         int tornilloDefectuoso = Integer.parseInt(txtTDefectuoso.getText());
         int tornilloNoDefectuoso = Integer.parseInt(txtTNoDefectuoso.getText());
-        int gradoEfi = 5;
+        int grado = 5;
 
         if (hora <= 1.5 && tornilloDefectuoso < 300 && tornilloNoDefectuoso > 10000) {
             grado = 20;
