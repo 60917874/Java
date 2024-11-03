@@ -54,41 +54,37 @@ public class frm27 extends JFrame {
         getContentPane().add(lblPolos);
 
         txtVendido = new JTextField();
-        txtVendido.setBounds(150, 30, 100, 30);
+        txtVendido.setBounds(150, 30, 80, 30);
         txtVendido.setHorizontalAlignment(SwingConstants.RIGHT);
         txtVendido.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtVendido);
 
         txtSBruto = new JTextField();
-        txtSBruto.setBounds(150, 80, 100, 30);
+        txtSBruto.setBounds(150, 80, 80, 30);
         txtSBruto.setHorizontalAlignment(SwingConstants.RIGHT);
         txtSBruto.setMargin(new Insets(5, 5, 5, 5));
-        txtSBruto.setEditable(false);
         getContentPane().add(txtSBruto);
 
         txtDescuento = new JTextField();
-        txtDescuento.setBounds(150, 130, 100, 30);
+        txtDescuento.setBounds(150, 130, 80, 30);
         txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
         txtDescuento.setMargin(new Insets(5, 5, 5, 5));
-        txtDescuento.setEditable(false);
         getContentPane().add(txtDescuento);
 
         txtSNeto = new JTextField();
-        txtSNeto.setBounds(150, 180, 100, 30);
+        txtSNeto.setBounds(150, 180, 80, 30);
         txtSNeto.setHorizontalAlignment(SwingConstants.RIGHT);
         txtSNeto.setMargin(new Insets(5, 5, 5, 5));
-        txtSNeto.setEditable(false);
         getContentPane().add(txtSNeto);
 
         txtPolos = new JTextField();
-        txtPolos.setBounds(150, 230, 100, 30);
+        txtPolos.setBounds(160, 230, 80, 30);
         txtPolos.setHorizontalAlignment(SwingConstants.RIGHT);
         txtPolos.setMargin(new Insets(5, 5, 5, 5));
-        txtPolos.setEditable(false);
         getContentPane().add(txtPolos);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(90, 260, 100, 30);
+        btnCalcular.setBounds(90, 280, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
@@ -100,12 +96,12 @@ public class frm27 extends JFrame {
     }
 
     protected void btnCalcular_actionPerformed() {
-        double vendido = Double.parseDouble(txtMontoVendido.getText());
+        double vendido = Double.parseDouble(txtVendido.getText());
         double basico = 600;
         double comision = vendido * 0.15;
         double bruto = basico + comision;
         double porcentaje;
-        
+
         if (bruto > 1800) {
             porcentaje = 0.10;
         } else {
