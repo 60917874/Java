@@ -51,15 +51,13 @@ public class frm28 extends JFrame {
         txtHoraSalida.setBounds(150, 80, 100, 30);
         txtHoraSalida.setHorizontalAlignment(SwingConstants.RIGHT);
         txtHoraSalida.setMargin(new Insets(5, 5, 5, 5));
-        txtHoraSalida.setEditable(false);
         getContentPane().add(txtHoraSalida);
 
         txtMensaje = new JTextField();
         txtMensaje.setBounds(50, 130, 200, 30);
-        txtMensaje.setEditable(false);
         getContentPane().add(txtMensaje);
 
-        JButton btnConvertir = new JButton("Convertir");
+        JButton btnConvertir = new JButton("Calcular");
         btnConvertir.setBounds(90, 180, 100, 30);
         getContentPane().add(btnConvertir);
 
@@ -74,7 +72,7 @@ public class frm28 extends JFrame {
     protected void btnConvertir_actionPerformed() {
         String horaEntradaStr = txtHoraEntrada.getText();
         String[] partes = horaEntradaStr.split(":");
-        
+
         if (partes.length != 2) {
             txtMensaje.setText("Formato inválido");
             txtHoraSalida.setText("");
