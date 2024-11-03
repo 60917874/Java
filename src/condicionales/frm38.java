@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 
 public class frm38 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtMes, txtAño, txtMes, txtDias;
+    JTextField txtMes, txtAño, txtDias, txtNombre;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -33,7 +33,7 @@ public class frm38 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        JLabel lblMes = new JLabel("Mes (1-12):");
+        JLabel lblMes = new JLabel("Mes:");
         lblMes.setBounds(50, 30, 80, 30);
         getContentPane().add(lblMes);
 
@@ -41,12 +41,12 @@ public class frm38 extends JFrame {
         lblAño.setBounds(50, 70, 80, 30);
         getContentPane().add(lblAño);
 
-        JLabel lblNombre = new JLabel("Mes:");
-        lblMes.setBounds(50, 130, 80, 30);
-        getContentPane().add(lbNombre);
+        JLabel lblNombre = new JLabel("Nombre:");
+        lblNombre.setBounds(50, 110, 80, 30);
+        getContentPane().add(lblNombre);
 
         JLabel lblDias = new JLabel("Días:");
-        lblDias.setBounds(50, 170, 80, 30);
+        lblDias.setBounds(50, 150, 80, 30);
         getContentPane().add(lblDias);
 
         txtMes = new JTextField();
@@ -62,19 +62,17 @@ public class frm38 extends JFrame {
         getContentPane().add(txtAño);
 
         txtNombre = new JTextField();
-        txtNombre.setBounds(150, 130, 120, 30);
+        txtNombre.setBounds(150, 110, 60, 30);
         txtNombre.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtNombre.setEditable(false);
         getContentPane().add(txtNombre);
 
         txtDias = new JTextField();
-        txtDias.setBounds(150, 170, 60, 30);
+        txtDias.setBounds(150, 150, 60, 30);
         txtDias.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtDias.setEditable(false);
         getContentPane().add(txtDias);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(100, 220, 100, 30);
+        btnCalcular.setBounds(100, 210, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(new ActionListener() {
