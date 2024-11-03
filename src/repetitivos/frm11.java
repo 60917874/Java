@@ -1,7 +1,6 @@
 package repetitivos;
 
 import java.awt.EventQueue;
-import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -36,7 +35,7 @@ public class frm11 extends JFrame {
         getContentPane().add(lblCantidad);
 
         txtCantidad = new JTextField();
-        txtCantidad.setBounds(200, 50, 50, 30);
+        txtCantidad.setBounds(120, 50, 50, 30);
         txtCantidad.setFocusable(false);
         txtCantidad.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCantidad);
@@ -58,8 +57,7 @@ public class frm11 extends JFrame {
 
         for (int i = 100; i < 1000; i++) {
             int primerDigito = (i / 100) % 10;
-            int segundoDigito = (i / 10) % 10;
-            int tercerDigito = i % 10;  
+            int tercerDigito = i % 10;
 
             if (primerDigito == tercerDigito) {
                 contador++;
