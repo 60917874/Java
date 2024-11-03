@@ -52,14 +52,13 @@ public class frm08 extends JFrame {
         getContentPane().add(txtExponente);
 
         txtResultado = new JTextField();
-        txtResultado.setBounds(50, 120, 200, 30);
-        txtResultado.setFocusable(false);
+        txtResultado.setBounds(150, 120, 90, 30);
         txtResultado.setHorizontalAlignment(SwingConstants.LEFT);
         txtResultado.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtResultado);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(100, 160, 100, 30);
+        btnCalcular.setBounds(150, 170, 100, 30);
         getContentPane().add(btnCalcular);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
@@ -68,7 +67,7 @@ public class frm08 extends JFrame {
     protected void btnCalcular_actionPerformed() {
         int base = Integer.parseInt(txtBase.getText());
         int exponente = Integer.parseInt(txtExponente.getText());
-        int resultado = calcularPotencia(base, exponente);
+        int resultado = potencia(base, exponente);
         txtResultado.setText("Resultado: " + resultado);
     }
 
