@@ -31,17 +31,18 @@ public class frm18 extends JFrame {
 		setLocationRelativeTo(null);
 
 		txtRpta = new JTextField();
-		txtRpta.setBounds( 20, 50, 150, 30);
-		txtRpta.setMargin( new Insets(5, 5, 5, 5) );
+		txtRpta.setBounds(20, 50, 150, 30);
+		txtRpta.setMargin(new Insets(5, 5, 5, 5));
 		getContentPane().add(txtRpta);
 
 		texto = "omar";
-		txtRpta.setText( toUpperCase() );
+		txtRpta.setText(toUpperCase());
 
 	}
 
 	protected String toUpperCase() {
-		if ( texto == null || texto.isEmpty() ) return "";
+		if (texto == null || texto.isEmpty())
+			return "";
 
 		int longitud = texto.length();
 		char letra;
@@ -49,13 +50,12 @@ public class frm18 extends JFrame {
 		String minusculas = "abcdfghijklmnñopqrstuvwyz";
 		String mayusculas = "ABCDEFGHIJKLMNÑOPQRSTUVWYZ";
 
-		for ( int i=0, index = -1; i < longitud; i++ ) {
+		for (int i = 0; i < longitud; i++) {
 			letra = texto.charAt(i);
-			letra = minusculas.contains("" + letra) ?
-                    mayusculas.charAt(minusculas.indexOf(letra) ) : letra;
-                    rpta += letra;
+			letra = minusculas.contains("" + letra) ? mayusculas.charAt(minusculas.indexOf(letra)) : letra;
+			rpta += letra;
 
-        }
+		}
 
 		return rpta;
 	}
