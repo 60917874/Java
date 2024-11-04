@@ -6,9 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
-public class frm18 extends JFrame {
+public class frm15 extends JFrame {
     private static final long serialVersionUID = 1L;
     JTextField txtTexto, txtMayusculas, txtMinusculas;
 
@@ -16,7 +15,7 @@ public class frm18 extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    frm18 frame = new frm18();
+                    frm15 frame = new frm15();
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -25,7 +24,7 @@ public class frm18 extends JFrame {
         });
     }
 
-    public frm18() {
+    public frm15() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(0, 0, 400, 400);
         setLayout(null);
@@ -46,7 +45,6 @@ public class frm18 extends JFrame {
 
         txtMayusculas = new JTextField();
         txtMayusculas.setBounds(200, 100, 150, 30);
-        txtMayusculas.setFocusable(false);
         getContentPane().add(txtMayusculas);
 
         JLabel lblMinusculas = new JLabel("Minúsculas:");
@@ -55,7 +53,6 @@ public class frm18 extends JFrame {
 
         txtMinusculas = new JTextField();
         txtMinusculas.setBounds(200, 150, 150, 30);
-        txtMinusculas.setFocusable(false);
         getContentPane().add(txtMinusculas);
 
         JButton btnConvertir = new JButton("Convertir");
