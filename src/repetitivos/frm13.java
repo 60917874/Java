@@ -64,7 +64,7 @@ public class frm13 extends JFrame {
         txtResultado.setText(String.valueOf(suma));
     }
 
-    int Suma(int n) {
+    int suma(int n) {
         int suma = 0;
 
         for (int i = 1; i <= n; i++) {
