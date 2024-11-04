@@ -58,6 +58,7 @@ public class frm02 extends JFrame {
         int numero = Integer.parseInt(txtNumero.getText());
         boolean esPrimo = esPrimo(numero, 2);
         txtEsPrimo.setText(esPrimo ? "Sí" : "No");
+
     }
 
     boolean esPrimo(int numero, int divisor) {
