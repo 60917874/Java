@@ -43,7 +43,6 @@ public class frm06 extends JFrame {
 
         txtResultado = new JTextField();
         txtResultado.setBounds(130, 70, 120, 30);
-        txtResultado.setEditable(false);
         getContentPane().add(txtResultado);
 
         JButton btnCalcular = new JButton("Calcular");
