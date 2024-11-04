@@ -53,7 +53,7 @@ public class frm09 extends JFrame {
         txtResultado.setBounds(120, 150, 150, 30);
         getContentPane().add(txtResultado);
 
-        JButton btnGenerar = new JButton("Generar");
+        JButton btnGenerar = new JButton("Calcular");
         btnGenerar.setBounds(100, 200, 100, 30);
         getContentPane().add(btnGenerar);
 
